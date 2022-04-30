@@ -3,14 +3,18 @@ namespace Roleplay
 {
     public class Hechizo
     {
-        public string Nombre{get;}
-        public int Daño{get;}
-        public int Defensa{get;}
+
+        public string nombre;
+        public string Nombre{get{return nombre;}}
+        public int daño;  
+        public int Daño{get{return daño;}}
+        public int defensa;
+        public int Defensa{get{return defensa;}}
         public Hechizo(string nombre, int daño, int defensa)
         {
-            this.Nombre = nombre;
-            this.Daño = daño;
-            this.Defensa = defensa;
+            this.nombre = nombre;
+            this.daño = daño;
+            this.defensa = defensa;
         }
     }
 }

@@ -3,11 +3,11 @@ namespace Roleplay
 {
     public class LibroDeHechizos
     {
-        public List<Hechizo> Listadehechisos;
+        private List<Hechizo> listadehechizos;
         public void AprenderNuevoHechizo(string name, int daño, int defensa)
         {
             Hechizo nuevohechizo = new Hechizo(name,daño,defensa);
-            Listadehechisos.Add(nuevohechizo);
+            listadehechizos.Add(nuevohechizo);
         }
     }
 }
