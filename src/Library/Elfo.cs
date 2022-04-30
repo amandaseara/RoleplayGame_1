@@ -7,34 +7,13 @@ namespace clases
 {
     public class Elfo
     {
+        private string nombre;
         private ArrayList equipamiento;
         private int ataqueBase;
         private int vidaBase;
+        private int vidaMax;
         private int defensaBase;
-        private int curacionBase;
-
-        public ArrayList GetEquipamiento()
-        {
-            return this.equipamiento;
-        }
-
-        public int GetAtaqueBase()
-        {
-            return this.ataqueBase;
-        }
-        public int GetVidaBase()
-        {
-            return this.vidaBase;
-        }
-        public int GetDefensaBase()
-        {
-            return this.defensaBase;
-        }
-        public int GetCuracionBase()
-        {
-            return this.curacionBase;
-        }
-        public Elfo(ArrayList equipamiento, int ataqueBase, int vidaBase, int defensaBase, int curacionBase)
+        public Elfo(ArrayList equipamiento, int ataqueBase, int vidaBase, int defensaBase)
         {
             for (int i = 0; i == 5; i++)
             {
@@ -99,9 +78,21 @@ namespace clases
         {
             this.equipamiento[5] = 5;
         }
-        public void Curar()
+        public void SerCurado()
         {
             this.vidaBase = 500;
+        }
+        public void CurarHechicero()
+        {
+            Hechicero.SerCurado();
+        }
+        public void CurarHumano()
+        {
+            Humano.SerCurado();
+        }
+        public void CurarEnano()
+        {
+            Enano.SerCurado();
         }
         public void Atacar()
         {

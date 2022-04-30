@@ -1,0 +1,20 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+
+namespace clases
+{
+    public class Pechera
+    {
+        private int defensa;
+        public int GetDefensa()
+        {
+            return this.defensa;
+        }
+        public Pechera()
+        {
+            this.defensa = 100;
+        }
+    }
+}
