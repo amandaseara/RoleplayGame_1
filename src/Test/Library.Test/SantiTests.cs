@@ -96,6 +96,22 @@ namespace Roleplay
             int expected = 500;
             Assert.AreEqual(expected, vidabase);
         }
+        [Test]
+        public void TestDefensaHechicero()
+        {
+            Hechicero hechicero = new Hechicero("Merlin");
+            int defensaHechicero = hechicero.Defensa;
+            int expected = 0;
+            Assert.AreEqual(expected, defensaHechicero);
+        }
+        [Test]
+        public void TestDefensaElfo()
+        {
+            Elfo elfo = new Elfo("Link");
+            int defensaElfo = elfo.Defensa;
+            int expected = 0;
+            Assert.AreEqual(expected, defensaElfo);
+        }
     }
 
 
