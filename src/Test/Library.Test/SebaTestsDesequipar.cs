@@ -8,6 +8,7 @@ namespace Test.Library
     public class TestDesequipar
     {
         private Arco arcoTest;
+        private Hacha hachaTest;
         private Baculo baculoTest;
         private Botas botasTest;
         private Escudo escudoTest;
@@ -25,6 +26,7 @@ namespace Test.Library
         public void Setup()
         {
             arcoTest = new Arco(100,0);
+            hachaTest = new Hacha(100,0);
             baculoTest = new Baculo(100);
             botasTest = new Botas(0,200);
             escudoTest =new Escudo(0,200);
@@ -50,7 +52,7 @@ namespace Test.Library
         {
             elfoTest.EquiparPechera(pecheraTest);
             elfoTest.DesequiparPechera(pecheraTest);
-            Assert.AreEqual(1, elfoTest.Equipamiento[0]);
+            Assert.AreEqual(1, elfoTest.Equipamiento[1]);
         }
         [Test]
         public void DesequiparElfo2()
