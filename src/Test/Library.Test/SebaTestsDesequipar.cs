@@ -21,7 +21,6 @@ namespace Test.Library
         private Enano enanoTest;
         private Hechicero hechiceroTest;
 
-
         [SetUp]
         public void Setup()
         {
@@ -39,6 +38,9 @@ namespace Test.Library
             hechiceroTest = new Hechicero("Richy");
             enanoTest = new Enano("Amanda");
         }
+
+        // Se prueba la funcion de desequipar; como cada personaje tiene un inventario diferente, se debe probar el metodo desequipar con todos los personajes. A su vez, cada item se almacena en un lugar diferente en el inventario, por lo que tambien hay que testear el cdesequipamiento de los items individualmente.
+
         [Test]
         // Prueba si una vez equipado un yelmo en elfo, se puede desequipar correctamente
         public void DesequiparElfo0()
@@ -47,7 +49,7 @@ namespace Test.Library
             elfoTest.DesequiparYelmo(yelmoTest);
             Assert.AreEqual(0, elfoTest.Equipamiento[0]);
         }
-        
+
         [Test]
         // Prueba si una vez equipada una pechera en elfo, se puede desequipar correctamente
         public void DesequiparElfo1()
@@ -56,6 +58,7 @@ namespace Test.Library
             elfoTest.DesequiparPechera(pecheraTest);
             Assert.AreEqual(1, elfoTest.Equipamiento[1]);
         }
+
         [Test]
         // Prueba si una vez equipadas las grebas en elfo, se pueden desequipar correctamente
         public void DesequiparElfo2()
@@ -64,6 +67,7 @@ namespace Test.Library
             elfoTest.DesequiparGrebas(grebasTest);
             Assert.AreEqual(2, elfoTest.Equipamiento[2]);
         }
+
         [Test]
         // Prueba si una vez equipadas las botas en elfo, se pueden desequipar correctamente
         public void DesequiparElfo3()
@@ -72,6 +76,7 @@ namespace Test.Library
             elfoTest.DesequiparBotas(botasTest);
             Assert.AreEqual(3, elfoTest.Equipamiento[3]);
         }
+
         [Test]
         // Prueba si una vez equipada una espada en elfo, se puede desequipar correctamente
         public void DesequiparElfo4()
@@ -80,6 +85,7 @@ namespace Test.Library
             elfoTest.DesequiparEspada(espadaTest);
             Assert.AreEqual(4, elfoTest.Equipamiento[4]);
         }
+
         [Test]
         // Prueba si una vez equipado un arco en elfo, se puede desequipar correctamente
         public void DesequiparElfo5()
@@ -89,6 +95,7 @@ namespace Test.Library
             Assert.AreEqual(5, elfoTest.Equipamiento[5]);
         }
 
+
         [Test]
         // Prueba si una vez equipado un yelmo en enano, se puede desequipar correctamente
         public void DesequiparEnano0()
@@ -97,6 +104,7 @@ namespace Test.Library
             enanoTest.DesequiparYelmo(yelmoTest);
             Assert.AreEqual(0, enanoTest.Equipamiento[0]);
         }
+
         [Test]
         // Prueba si una vez equipado una pechera en enano, se puede desequipar correctamente
         public void DesequiparEnano1()
@@ -105,6 +113,7 @@ namespace Test.Library
             enanoTest.DesequiparPechera(pecheraTest);
             Assert.AreEqual(1, enanoTest.Equipamiento[1]);
         }
+
         [Test]
         // Prueba si una vez equipadas las grebas en enano, se pueden desequipar correctamente
         public void DesequiparEnano2()
@@ -113,6 +122,7 @@ namespace Test.Library
             enanoTest.DesequiparGrebas(grebasTest);
             Assert.AreEqual(2, enanoTest.Equipamiento[2]);
         }
+
         [Test]
         public void DesequiparEnano3()
         // Prueba si una vez equipadas las botas en enano, se pueden desequipar correctamente
@@ -121,6 +131,7 @@ namespace Test.Library
             enanoTest.DesequiparBotas(botasTest);
             Assert.AreEqual(3, enanoTest.Equipamiento[3]);
         }
+
         [Test]
         // Prueba si una vez equipada una espada en enano, se puede desequipar correctamente
         public void DesequiparEnano4()
@@ -129,6 +140,7 @@ namespace Test.Library
             enanoTest.DesequiparEspada(espadaTest);
             Assert.AreEqual(4, enanoTest.Equipamiento[4]);
         }
+
         [Test]
         // Prueba si una vez equipado un hacha en enano, se puede desequipar correctamente
         public void DesequiparEnano5()
@@ -138,6 +150,7 @@ namespace Test.Library
             Assert.AreEqual(5, enanoTest.Equipamiento[5]);
         }
 
+
         [Test]
         // Prueba si una vez equipado un yelmo en humano, se puede desequipar correctamente
         public void DesequiparHumano0()
@@ -146,6 +159,7 @@ namespace Test.Library
             humanoTest.DesequiparYelmo(yelmoTest);
             Assert.AreEqual(0, humanoTest.Equipamiento[0]);
         }
+
         [Test]
         // Prueba si una vez equipada una pechera en humano, se puede desequipar correctamente
         public void DesequiparHumano1()
@@ -154,6 +168,7 @@ namespace Test.Library
             humanoTest.DesequiparPechera(pecheraTest);
             Assert.AreEqual(1, humanoTest.Equipamiento[1]);
         }
+
         [Test]
         // Prueba si una vez equipadas las grebas en humano, se pueden desequipar correctamente
         public void DesequiparHumano2()
@@ -163,6 +178,7 @@ namespace Test.Library
             Assert.AreEqual(2, humanoTest.Equipamiento[2]);
         }
 
+
         [Test]
         // Prueba si una vez equipadas las botas en humano, se pueden desequipar correctamente
         public void DesequiparHumano3()
@@ -171,6 +187,7 @@ namespace Test.Library
             humanoTest.DesequiparBotas(botasTest);
             Assert.AreEqual(3, humanoTest.Equipamiento[3]);
         }
+
         [Test]
         // Prueba si una vez equipada una espada en humano, se puede desequipar correctamente
         public void DesequiparHumano4()
@@ -179,6 +196,7 @@ namespace Test.Library
             humanoTest.DesequiparEspada(espadaTest);
             Assert.AreEqual(4, humanoTest.Equipamiento[4]);
         }
+
         [Test]
         // Prueba si una vez equipado un escudo en humano, se puede desequipar correctamente
         public void DesequiparHumano5()
@@ -188,6 +206,7 @@ namespace Test.Library
             Assert.AreEqual(5, humanoTest.Equipamiento[5]);
         }
 
+
         [Test]
         // Prueba si una vez equipado un yelmo en hechicero, se puede desequipar correctamente
         public void DesequiparHechicero0()
@@ -196,6 +215,7 @@ namespace Test.Library
             hechiceroTest.DesequiparYelmo(yelmoTest);
             Assert.AreEqual(0, hechiceroTest.Equipamiento[0]);
         }
+
         [Test]
         // Prueba si una vez equipada una pechera en hechicero, se puede desequipar correctamente
         public void DesequiparHechicero1()
@@ -204,6 +224,7 @@ namespace Test.Library
             hechiceroTest.DesequiparPechera(pecheraTest);
             Assert.AreEqual(1, hechiceroTest.Equipamiento[1]);
         }
+
         [Test]
         // Prueba si una vez equipadas las grebas en hechicero, se pueden desequipar correctamente
         public void DesequiparHechicero2()
@@ -212,6 +233,7 @@ namespace Test.Library
             hechiceroTest.DesequiparGrebas(grebasTest);
             Assert.AreEqual(2, hechiceroTest.Equipamiento[2]);
         }
+
         [Test]
         // Prueba si una vez equipadas las botas en hechicero, se pueden desequipar correctamente
         public void DesequiparHechicero3()
@@ -220,6 +242,7 @@ namespace Test.Library
             hechiceroTest.DesequiparBotas(botasTest);
             Assert.AreEqual(3, hechiceroTest.Equipamiento[3]);
         }
+
         [Test]
         // Prueba si una vez equipado un baculo en hechicero, se puede desequipar correctamente
         public void DesequiparHechicero4()
