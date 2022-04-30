@@ -35,6 +35,7 @@ namespace Roleplay
         }
         public void EquiparYelmo(Yelmo yelmo)
         {
+            
             this.equipamiento[0] = yelmo;
             this.ataque += yelmo.Daño;
             this.defensa += yelmo.Defensa;
