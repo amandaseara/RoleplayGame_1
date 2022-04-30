@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using clases;
 
 namespace Test.Library
 {
@@ -8,9 +9,21 @@ namespace Test.Library
     {
 
         [Test]
-        public void dummyTest()
+        public void dañoArco()
         {
-            Assert.True(true);
+            Arco arco = new Arco();
+            int dañoArco = arco.GetDaño();
+            int expected = 100;
+            Assert.AreEqual(expected, dañoArco);
+        }
+
+        [Test]
+        public void dañoEspada()
+        {
+            Espada espada = new Espada();
+            int dañoEspada = espada.GetDaño();
+            int expected = 100;
+            Assert.AreEqual(expected, dañoEspada);
         }
 
     }
