@@ -8,10 +8,10 @@ namespace Roleplay
     {
         private string nombre;
         private ArrayList equipamiento;
-        private int ataqueBase = 500;
+        private int ataque = 500;
         private int vidaMax = 500;
-        public int vidaBase = 500;
-        private int defensaBase = 0;
+        public int vidaActual = 500;
+        private int defensa = 0;
 
         public Humano(string nombre)
         {
@@ -34,7 +34,7 @@ namespace Roleplay
                     equipamiento[posicion] = yelmo;
                 }
             }
-            this.defensaBase = this.defensaBase + yelmo.Defensa;
+            this.defensa = this.defensa + yelmo.Defensa;
         }
         public void EquiparPechera(Pechera pechera)
         {
@@ -45,7 +45,7 @@ namespace Roleplay
                     equipamiento[posicion] = pechera;
                 }
             }
-            this.defensaBase = this.defensaBase + pechera.Defensa;
+            this.defensa = this.defensa + pechera.Defensa;
         }
         public void EquiparGrebas(Grebas grebas)
         {
@@ -56,7 +56,7 @@ namespace Roleplay
                     equipamiento[posicion] = grebas;
                 }
             }
-            this.defensaBase = this.defensaBase + grebas.Defensa;
+            this.defensa = this.defensa + grebas.Defensa;
         }
         public void EquiparBotas(Botas botas)
         {
@@ -67,7 +67,7 @@ namespace Roleplay
                     equipamiento[posicion] = botas;
                 }
             }
-            this.defensaBase = this.defensaBase + botas.Defensa;
+            this.defensa = this.defensa + botas.Defensa;
         }
         public void EquiparEspada(Espada espada)
         {
@@ -78,7 +78,7 @@ namespace Roleplay
                     equipamiento[posicion] = espada;
                 }
             }
-            this.defensaBase = this.defensaBase + espada.Defensa;
+            this.defensa = this.defensa + espada.Defensa;
         }
         public void EquiparEscudo(Escudo escudo)
         {
@@ -89,17 +89,17 @@ namespace Roleplay
                     equipamiento[posicion] = escudo;
                 }
             }
-            this.defensaBase = this.defensaBase + escudo.Defensa;
+            this.defensa = this.defensa + escudo.Defensa;
         }
 
         //DESEQUIPAR
         public void DesequiparYelmo(Yelmo yelmo)
         {
-            foreach(Yelmo yelmo in equipamiento)
+            foreach(Yelmo y in equipamiento)
             {
                 equipamiento[yelmo] = 0;
             }
-            this.defensaBase = this.defensaBase - yelmo.Defensa;
+            this.defensa = this.defensa - yelmo.Defensa;
         }
         public void DesequiparPechera(Pechera pechera)
         {
@@ -107,7 +107,7 @@ namespace Roleplay
             {
                 equipamiento[pechera] = 1;
             }
-            this.defensaBase = this.defensaBase - pechera.Defensa;
+            this.defensa = this.defensa - pechera.Defensa;
         }
         public void DesequiparGrebas(Grebas grebas)
         {
@@ -115,7 +115,7 @@ namespace Roleplay
             {
                 equipamiento[grebas] = 2;
             }
-            this.defensaBase = this.defensaBase - grebas.Defensa;
+            this.defensa = this.defensa - grebas.Defensa;
         }
         public void DesequiparBotas(Botas botas)
         {
@@ -123,7 +123,7 @@ namespace Roleplay
             {
                 equipamiento[botas] = 3;
             }
-            this.defensaBase = this.defensaBase - botas.Defensa;
+            this.defensa = this.defensa - botas.Defensa;
         }
         public void DesequiparEspada(Espada espada)
         {
@@ -131,7 +131,7 @@ namespace Roleplay
             {
                 equipamiento[espada] = 4;
             }
-            this.defensaBase = this.defensaBase - espada.Defensa;
+            this.defensa = this.defensa - espada.Defensa;
         }
         public void DesequiparEscudo(Escudo escudo)
         {
@@ -139,13 +139,13 @@ namespace Roleplay
             {
                 equipamiento[escudo] = 5;
             }
-            this.defensaBase = this.defensaBase - escudo.Defensa;
+            this.defensa = this.defensa - escudo.Defensa;
         }
 
         //ATAQUES
         public void AtacarHechicero(Hechicero hechicero)
         {
-            int dañoTotal = this.ataqueBase;
+            int dañoTotal = this.ataque;
             foreach(Espada espada in equipamiento)
             {
                 dañoTotal = dañoTotal + espada.Daño;
@@ -155,7 +155,7 @@ namespace Roleplay
         }
         public void AtacarElfo(Elfo elfo)
         {
-            int dañoTotal = this.ataqueBase;
+            int dañoTotal = this.ataque;
             foreach(Espada espada in equipamiento)
             {
                 dañoTotal = dañoTotal + espada.Daño;
@@ -165,7 +165,7 @@ namespace Roleplay
         }
         public void AtacarEnano(Enano enano)
         {
-            int dañoTotal = this.ataqueBase;
+            int dañoTotal = this.ataque;
             foreach(Espada espada in equipamiento)
             {
                 dañoTotal = dañoTotal + espada.Daño;
@@ -175,7 +175,7 @@ namespace Roleplay
         }
         public void AtacarHumano(Humano humano)
         {
-            int dañoTotal = this.ataqueBase;
+            int dañoTotal = this.ataque;
             foreach(Espada espada in equipamiento)
             {
                 dañoTotal = dañoTotal + espada.Daño;
@@ -189,11 +189,11 @@ namespace Roleplay
         //RECIBIR ATAQUE
         public void Defender(int dañoEntrante)
         {
-            if ( (dañoEntrante-this.defensaBase) > 0)
+            if ( (dañoEntrante-this.defensa) > 0)
             {
-                int dañoRecibido = dañoEntrante-this.defensaBase;
-                this.vidaBase-=dañoRecibido;
-                Console.WriteLine($"{this.nombre} recibio {dañoRecibido} pts de daño y su nueva vida es {vidaBase}");
+                int dañoRecibido = dañoEntrante-this.defensa;
+                this.vidaActual-=dañoRecibido;
+                Console.WriteLine($"{this.nombre} recibio {dañoRecibido} pts de daño y su nueva vida es {vidaActual}");
             }
             else
             {
@@ -204,7 +204,7 @@ namespace Roleplay
         //RECIBIR CURACION
         public void SerCurado()
         {
-            this.vidaBase = this.vidaMax;
+            this.vidaActual = this.vidaMax;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Roleplay
         private ArrayList equipamiento;
         private int ataqueBase = 500;
         private int vidaMax = 500;
-        public int vidaBase = 500;
+        public int vidaActual = 500;
         private int defensaBase = 0;
 
         public Enano(string nombre)
@@ -192,8 +192,8 @@ namespace Roleplay
             if ((dañoEntrante - this.defensaBase) > 0)
             {
                 int dañoRecibido = dañoEntrante - this.defensaBase;
-                this.vidaBase -= dañoRecibido;
-                Console.WriteLine($"{this.nombre} recibio {dañoRecibido} pts de daño y su nueva vida es {vidaBase}");
+                this.vidaActual -= dañoRecibido;
+                Console.WriteLine($"{this.nombre} recibio {dañoRecibido} pts de daño y su nueva vida es {vidaActual}");
             }
             else
             {
@@ -204,7 +204,7 @@ namespace Roleplay
         //RECIBIR CURACION
         public void SerCurado()
         {
-            this.vidaBase = this.vidaMax;
+            this.vidaActual = this.vidaMax;
         }
     }
 }
