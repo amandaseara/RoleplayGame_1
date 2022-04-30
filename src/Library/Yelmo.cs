@@ -7,12 +7,15 @@ namespace Roleplay
 {
     public class Yelmo
     {
-        private int ataque = 0;
-        private int defensa = 500;
+        private int daño;
+        private int defensa;
+        public int Daño{get{return daño;}}
+        public int Defensa{get{return defensa;}}
 
-        public int getDefensa()
+        public Yelmo(int daño, int defensa)
         {
-            return this.defensa;
+            this.daño = daño;
+            this.defensa = defensa;
         }
     }
 }

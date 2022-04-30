@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 namespace Roleplay
 {
-    public class Arco
+    public class Pechera
     {
         private int daño;
         private int defensa;
         public int Daño{get{return daño;}}
         public int Defensa{get{return defensa;}}
 
-        public Arco(int daño, int defensa)
+        public Pechera(int daño, int defensa)
         {
             this.daño = daño;
             this.defensa = defensa;
