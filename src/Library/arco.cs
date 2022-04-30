@@ -12,7 +12,7 @@ namespace clases
         {
             return this.daño;
         }
-        public Arco(int daño)
+        public Arco()
         {
             this.daño = 100;
         }
