@@ -12,9 +12,15 @@ namespace clases
         {
             return this.daño;
         }
+        private int defensa;
+        public int GetDefensa()
+        {
+            return this.defensa;
+        }
         public Espada()
         {
             this.daño = 100;
+            this.defensa = 0;
         }
 
     }
