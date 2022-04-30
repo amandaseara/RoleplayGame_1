@@ -5,14 +5,17 @@ using System.Collections.Generic;
 
 namespace Roleplay
 {
-    public class Grabas
+    public class Grebas
     {
         private int ataque = 0;
-        private int defensa = 500;
-
-        public int getDefensa()
+        private int defensa;
+        public int GetDefensa()
         {
             return this.defensa;
+        }
+        public Grebas()
+        {
+            this.defensa = 100;
         }
     }
 }

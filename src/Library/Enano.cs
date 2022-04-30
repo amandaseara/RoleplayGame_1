@@ -27,18 +27,18 @@ namespace Roleplay
         //EQUIPAR
         public void EquiparYelmo(Yelmo yelmo)
         {
-            foreach(int posicion in equipamiento)
+            foreach (int posicion in equipamiento)
             {
                 if (posicion == 0)
                 {
                     equipamiento[posicion] = yelmo;
                 }
             }
-            this.defensaBase = this.defensaBase + yelmo.Defensa;
+            this.defensaBase = this.defensaBase + yelmo.getDefensa();
         }
         public void EquiparPechera(Pechera pechera)
         {
-            foreach(int posicion in equipamiento)
+            foreach (int posicion in equipamiento)
             {
                 if (posicion == 1)
                 {
@@ -49,7 +49,7 @@ namespace Roleplay
         }
         public void EquiparGrebas(Grebas grebas)
         {
-            foreach(int posicion in equipamiento)
+            foreach (int posicion in equipamiento)
             {
                 if (posicion == 2)
                 {
@@ -60,7 +60,7 @@ namespace Roleplay
         }
         public void EquiparBotas(Botas botas)
         {
-            foreach(int posicion in equipamiento)
+            foreach (int posicion in equipamiento)
             {
                 if (posicion == 3)
                 {
@@ -71,7 +71,7 @@ namespace Roleplay
         }
         public void EquiparEspada(Espada espada)
         {
-            foreach(int posicion in equipamiento)
+            foreach (int posicion in equipamiento)
             {
                 if (posicion == 4)
                 {
@@ -82,7 +82,7 @@ namespace Roleplay
         }
         public void EquiparEscudo(Escudo escudo)
         {
-            foreach(int posicion in equipamiento)
+            foreach (int posicion in equipamiento)
             {
                 if (posicion == 5)
                 {
@@ -93,71 +93,95 @@ namespace Roleplay
         }
 
         //DESEQUIPAR
-        public void DesequiparYelmo()
+        public void DesequiparYelmo(Yelmo yelmo)
         {
-            this.equipamiento[0] = 0;
+            foreach (Yelmo yelmo in equipamiento)
+            {
+                yelmo = 0;
+            }
+            this.defensaBase = this.defensaBase - yelmo.Defensa;
         }
-        public void DesequiparPechera()
+        public void DesequiparPechera(Pechera pechera)
         {
-            this.equipamiento[1] = 1;
+            foreach (Pechera pechera in equipamiento)
+            {
+                pechera = 1;
+            }
+            this.defensaBase = this.defensaBase - pechera.Defensa;
         }
-        public void DesequiparGrebas()
+        public void DesequiparGrebas(Grebas grebas)
         {
-            this.equipamiento[2] = 2;
+            foreach (Grebas grebas in equipamiento)
+            {
+                grebas = 2;
+            }
+            this.defensaBase = this.defensaBase - grebas.Defensa;
         }
-        public void DesequiparBotas()
+        public void DesequiparBotas(Botas botas)
         {
-            this.equipamiento[3] = 3;
+            foreach (Botas botas in equipamiento)
+            {
+                botas = 3;
+            }
+            this.defensaBase = this.defensaBase - botas.Defensa;
         }
-        public void DesequiparEspada()
+        public void DesequiparEspada(Espada espada)
         {
-            this.equipamiento[4] = 4;
+            foreach (Espada espada in equipamiento)
+            {
+                espada = 4;
+            }
+            this.defensaBase = this.defensaBase - espada.Defensa;
         }
-        public void DesequiparEscudo()
+        public void DesequiparEscudo(Escudo escudo)
         {
-            this.equipamiento[5] = 5;
+            foreach (Escudo escudo in equipamiento)
+            {
+                escudo = 5;
+            }
+            this.defensaBase = this.defensaBase - escudo.Defensa;
         }
 
         //ATAQUES
         public void AtacarHechicero(Hechicero hechicero)
         {
             int dañoTotal = this.ataqueBase;
-            foreach(Espada espada in equipamiento)
+            foreach (Espada espada in equipamiento)
             {
                 dañoTotal = dañoTotal + espada.Daño();
             }
 
-            hechicero.defender(dañoTotal); 
+            hechicero.defender(dañoTotal);
         }
         public void AtacarElfo(Elfo elfo)
         {
             int dañoTotal = this.ataqueBase;
-            foreach(Espada espada in equipamiento)
+            foreach (Espada espada in equipamiento)
             {
                 dañoTotal = dañoTotal + espada.Daño();
             }
 
-            elfo.defender(dañoTotal); 
+            elfo.defender(dañoTotal);
         }
         public void AtacarEnano(Enano enano)
         {
             int dañoTotal = this.ataqueBase;
-            foreach(Espada espada in equipamiento)
+            foreach (Espada espada in equipamiento)
             {
                 dañoTotal = dañoTotal + espada.Daño();
             }
 
-            enano.defender(dañoTotal); 
+            enano.defender(dañoTotal);
         }
         public void AtacarHumano(Humano humano)
         {
             int dañoTotal = this.ataqueBase;
-            foreach(Espada espada in equipamiento)
+            foreach (Espada espada in equipamiento)
             {
                 dañoTotal = dañoTotal + espada.Daño;
             }
 
-            humano.defender(dañoTotal); 
+            humano.defender(dañoTotal);
         }
 
 
@@ -165,10 +189,10 @@ namespace Roleplay
         //RECIBIR ATAQUE
         public void defender(int dañoEntrante)
         {
-            if ( (dañoEntrante-this.defensaBase) > 0)
+            if ((dañoEntrante - this.defensaBase) > 0)
             {
-                int dañoRecibido = dañoEntrante-this.defensaBase;
-                this.vidaBase-=dañoRecibido;
+                int dañoRecibido = dañoEntrante - this.defensaBase;
+                this.vidaBase -= dañoRecibido;
                 Console.WriteLine($"{this.nombre} recibio {dañoRecibido} pts de daño y su nueva vida es {vidaBase}");
             }
             else
