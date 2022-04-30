@@ -40,6 +40,8 @@ namespace Test.Library
             enanoTest = new Enano("Amanda");
         }
 
+        // Se prueba la funcion de equipar; como cada personaje tiene un inventario diferente, se debe probar el metodo equipar con todos los personajes. A su vez, cada item se almacena en un lugar diferente en el inventario, por lo que tambien hay que testear el equipamiento de los items individualmente.
+
         [Test]
         // Prueba equipar un yelmo en elfo, aunque tenga otro equipado
         public void equiparElfo0()

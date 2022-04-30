@@ -39,6 +39,10 @@ namespace Test.Library
             hechiceroTest = new Hechicero("Richy");
             enanoTest = new Enano("Amanda");
         }
+
+        // Se prueba la funcion de desequipar; como cada personaje tiene un inventario diferente, se debe probar el metodo desequipar con todos los personajes. A su vez, cada item se almacena en un lugar diferente en el inventario, por lo que tambien hay que testear el cdesequipamiento de los items individualmente.
+
+
         [Test]
         // Prueba si una vez equipado un yelmo en elfo, se puede desequipar correctamente
         public void DesequiparElfo0()
