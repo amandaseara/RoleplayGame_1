@@ -5,7 +5,7 @@ namespace Roleplay
     {
         private List<Hechizo> listadehechizos;
         /// <summary>
-        /// En el constructor de libro de hechizos se crea la lista que contiene cada hechizo
+        /// En el constructor de libro de hechizos se crea la lista que contiene cada libro de hechizos
         /// junto con el hechizo inicial que se pide tener en la letra del problema
         /// </summary>
         public LibroDeHechizos()
@@ -27,7 +27,7 @@ namespace Roleplay
         }
         /// <summary>
         /// Aprender nuevo hechizo se ocupa de crear un hechizo y añadirlo a la lista siempre y cuando este no exista
-        /// ya que queremos que cada libro contenga hechizos unicos, ya que no nos interesa que tenga el mismo hechizo duplicado
+        /// ya que queremos que cada libro contenga un hechizo unico, ya que no nos interesa que tenga el mismo hechizo duplicado
         /// </summary>
         /// <param name="name"></param>
         /// <param name="daño"></param>
