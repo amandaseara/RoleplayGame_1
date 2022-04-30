@@ -148,30 +148,30 @@ namespace Roleplay
             int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                dañoTotal = dañoTotal + espada.Daño();
+                dañoTotal = dañoTotal + espada.Daño;
             }
 
-            hechicero.defender(dañoTotal); 
+            hechicero.Defender(dañoTotal); 
         }
         public void AtacarElfo(Elfo elfo)
         {
             int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                dañoTotal = dañoTotal + espada.Daño();
+                dañoTotal = dañoTotal + espada.Daño;
             }
 
-            elfo.defender(dañoTotal); 
+            elfo.Defender(dañoTotal); 
         }
         public void AtacarEnano(Enano enano)
         {
             int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                dañoTotal = dañoTotal + espada.Daño();
+                dañoTotal = dañoTotal + espada.Daño;
             }
 
-            enano.defender(dañoTotal); 
+            enano.Defender(dañoTotal); 
         }
         public void AtacarHumano(Humano humano)
         {
@@ -181,13 +181,13 @@ namespace Roleplay
                 dañoTotal = dañoTotal + espada.Daño;
             }
 
-            humano.defender(dañoTotal); 
+            humano.Defender(dañoTotal); 
         }
 
 
 
         //RECIBIR ATAQUE
-        public void defender(int dañoEntrante)
+        public void Defender(int dañoEntrante)
         {
             if ( (dañoEntrante-this.defensaBase) > 0)
             {

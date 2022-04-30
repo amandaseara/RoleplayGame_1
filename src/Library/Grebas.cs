@@ -7,15 +7,15 @@ namespace Roleplay
 {
     public class Grebas
     {
-        private int ataque = 0;
+        private int daño;
         private int defensa;
-        public int GetDefensa()
+        public int Daño{get{return daño;}}
+        public int Defensa{get{return defensa;}}
+
+        public Grebas(int daño, int defensa)
         {
-            return this.defensa;
-        }
-        public Grebas()
-        {
-            this.defensa = 100;
+            this.daño = daño;
+            this.defensa = defensa;
         }
     }
 }

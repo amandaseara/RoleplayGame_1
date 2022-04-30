@@ -5,23 +5,17 @@ using System.Collections.Generic;
 
 namespace Roleplay
 {
-    public class Espada
+     public class Espada
     {
         private int daño;
-        public int GetDaño()
-        {
-            return this.daño;
-        }
         private int defensa;
-        public int GetDefensa()
-        {
-            return this.defensa;
-        }
-        public Espada()
-        {
-            this.daño = 100;
-            this.defensa = 0;
-        }
+        public int Daño{get{return daño;}}
+        public int Defensa{get{return defensa;}}
 
+        public Espada(int daño, int defensa)
+        {
+            this.daño = daño;
+            this.defensa = defensa;
+        }
     }
 }
