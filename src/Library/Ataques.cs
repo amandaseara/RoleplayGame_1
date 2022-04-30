@@ -37,11 +37,6 @@ namespace Roleplay
         {
             defensor.Defender(atacante.Ataque);
         }
-        /// <summary>
-        /// Ataque de Humanos a otras clases y a si misma
-        /// </summary>
-        /// <param name="atacante"></param>
-        /// <param name="defensor"></param>
         public static void AtaquedeHumanoaHumano(Humano atacante, Humano defensor)
         {
             defensor.Defender(atacante.Ataque);

@@ -9,10 +9,13 @@ namespace Roleplay
         public string Nombre{get{return nombre;}}
         private int vidaMax = 500;
         private int vidaActual = 500;
+        public int VidaActual{get{return vidaActual;}}
         private int ataque = 500;
         private int poder = 500;
+        public int Poder{get {return poder;}}
         public int Ataque {get{return ataque;}}
-        private int defensa = 500;
+        private int defensa = 0;
+        public int Defensa{get {return defensa;}}
         private ArrayList equipamiento;
         private LibroDeHechizos libro = new LibroDeHechizos();
         public Hechicero(string name)
