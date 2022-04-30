@@ -79,45 +79,41 @@ namespace Roleplay
         //ATAQUES
         public void AtacarHechicero(Hechicero hechicero)
         {
-            int dañoTotal;
+            int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                int dañoEspada = espada.GetDaño();
+                dañoTotal = dañoTotal + espada.GetDaño();
             }
-            dañoTotal = this.ataqueBase + dañoEspada;
 
             hechicero.defender(dañoTotal); 
         }
         public void AtacarElfo(Elfo elfo)
         {
-            int dañoTotal;
+            int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                int dañoEspada = espada.GetDaño();
+                dañoTotal = dañoTotal + espada.GetDaño();
             }
-            dañoTotal = this.ataqueBase + dañoEspada;
 
             elfo.defender(dañoTotal); 
         }
         public void AtacarEnano(Enano enano)
         {
-            int dañoTotal;
+            int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                int dañoEspada = espada.GetDaño();
+                dañoTotal = dañoTotal + espada.GetDaño();
             }
-            dañoTotal = this.ataqueBase + dañoEspada;
 
             Enano.defender(dañoTotal); 
         }
         public void AtacarHumano(Humano humano)
         {
-            int dañoTotal;
+            int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                int dañoEspada = espada.GetDaño();
+                dañoTotal = dañoTotal + espada.GetDaño();
             }
-            dañoTotal = this.ataqueBase + dañoEspada;
 
             Enano.defender(dañoTotal); 
         }
