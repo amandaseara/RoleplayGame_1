@@ -31,22 +31,26 @@ namespace Roleplay
         public void EquiparYelmo(Yelmo yelmo)
         {
             this.equipamiento[0] = yelmo;
-            this.defensa +=yelmo.Defensa;
+            this.ataque+=yelmo.Daño;
+            this.defensa += yelmo.Defensa;
         }
         public void EquiparPechera(Pechera pechera)
         {
             this.equipamiento[1] = pechera;
-            this.defensa +=pechera.Defensa;
+            this.ataque+=pechera.Daño;
+            this.defensa += pechera.Defensa;
         }
         public void EquiparGrebas(Grebas grebas)
         {
             this.equipamiento[2] = grebas;
-            this.defensa +=grebas.Defensa;
+            this.ataque+=grebas.Daño;
+            this.defensa += grebas.Defensa;
         }
         public void EquiparBotas(Botas botas)
         {
             this.equipamiento[3] = botas;
-            this.defensa +=botas.Defensa;
+            this.ataque+=botas.Daño;
+            this.defensa += botas.Defensa;
         }
         public void EquiparBaculo(Baculo baculo)
         {
@@ -57,34 +61,38 @@ namespace Roleplay
 
         public void DesequiparYelmo(Yelmo yelmo)
         {
-            if (yelmo==this.equipamiento[0])
+            if (yelmo == this.equipamiento[0])
             {
-                this.defensa-=yelmo.Defensa;
-                this.equipamiento[0]=0;
+                this.defensa -= yelmo.Defensa;
+                this.ataque -= yelmo.Daño;
+                this.equipamiento[0] = 0;
             }
         }
         public void DesequiparPechera(Pechera pechera)
         {
-            if (pechera==this.equipamiento[1])
+            if (pechera == this.equipamiento[1])
             {
-                this.defensa-=pechera.Defensa;
-                this.equipamiento[1]=1;
+                this.defensa -= pechera.Defensa;
+                this.ataque -= pechera.Daño;
+                this.equipamiento[1] = 1;
             }
         }
         public void DesequiparGrebas(Grebas grebas)
         {
-            if (grebas==this.equipamiento[2])
+            if (grebas == this.equipamiento[2])
             {
-                this.defensa-=grebas.Defensa;
-                this.equipamiento[2]=2;
+                this.defensa -= grebas.Defensa;
+                this.ataque -= grebas.Daño;
+                this.equipamiento[2] = 2;
             }
         }
         public void DesequiparBotas(Botas botas)
         {
-            if (botas==this.equipamiento[3])
+            if (botas == this.equipamiento[3])
             {
-                this.defensa-=botas.Defensa;
-                this.equipamiento[3]=3;
+                this.defensa -= botas.Defensa;
+                this.ataque -= botas.Daño;
+                this.equipamiento[3] = 3;
             }
         }
         public void DesequiparBaculo(Baculo baculo)
@@ -101,8 +109,12 @@ namespace Roleplay
         }
         public int UsarHechizoparaAtaque(String nombredeHechizo)
         {
-            int dañoEntrante = libro.UsarHechizodeAtaque(nombredeHechizo);
-            return dañoEntrante;
+            int dañoSaliente = libro.UsarHechizodeAtaque(nombredeHechizo) + this.poder;
+            return dañoSaliente;
+        }
+        public void UsarHechizoparaDefensa(String nombredeHechizo)
+        {
+            this.defensa += libro.UsarHechizodeDefensa(nombredeHechizo) + this.poder;
         }
         public void Defender(int dañoEntrante)
         {
@@ -110,13 +122,25 @@ namespace Roleplay
             {
                 int dañoRecibido = dañoEntrante-this.defensa;
                 this.vidaActual-=dañoRecibido;
-                Console.WriteLine($"{this.nombre} recibio {dañoRecibido} pts de daño y su nueva vida es {vidaActual}");
-            }
-            else
-            {
-                Console.WriteLine("Ataque Repelido");
             }
         }
+        public static void CurarElfo(Elfo elfo)
+        {
+            elfo.SerCurado();
+        }
+        public static void CurarHechicero(Hechicero hechicero)
+        {
+            hechicero.SerCurado();
+        }
+        public static void CurarHumano(Humano humano)
+        {
+            humano.SerCurado();
+        }
+        public static void CurarEnano(Enano enano)
+        {
+            enano.SerCurado();
+        }
+
         public void SerCurado()
         {
             this.vidaActual=this.vidaMax;
