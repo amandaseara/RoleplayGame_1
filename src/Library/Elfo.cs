@@ -92,7 +92,7 @@ namespace clases
         {
             Enano.SerCurado();
         }
-        public void Atacar()
+        public void AtacarHechicero()
         {
             int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
@@ -100,9 +100,39 @@ namespace clases
                 int dañoEspada = espada.GetDaño();
                 dañoTotal += dañoEspada;
             }
-            // atacar con dañoTotal
+            Hechicero.defender(dañoTotal);
         }
-        public void Defender()
+        public void AtacarHumano()
+        {
+            int dañoTotal = this.ataqueBase;
+            foreach(Espada espada in equipamiento)
+            {
+                int dañoEspada = espada.GetDaño();
+                dañoTotal += dañoEspada;
+            }
+            Humano.defender(dañoTotal);
+        }
+        public void AtacarEnano()
+        {
+            int dañoTotal = this.ataqueBase;
+            foreach(Espada espada in equipamiento)
+            {
+                int dañoEspada = espada.GetDaño();
+                dañoTotal += dañoEspada;
+            }
+            Enano.defender(dañoTotal);
+        }
+        public void AtacarElfo()
+        {
+            int dañoTotal = this.ataqueBase;
+            foreach(Espada espada in equipamiento)
+            {
+                int dañoEspada = espada.GetDaño();
+                dañoTotal += dañoEspada;
+            }
+            this.Defender(dañoTotal);
+        }
+        public void Defender(int ataqueRecibido)
         {
             int defensaTotal = this.defensaBase;
             foreach(Yelmo yelmo in equipamiento)
@@ -126,7 +156,7 @@ namespace clases
                 defensaTotal += defensaBotas;
             }
             // recibir ataque
-            // this.vidaBase = ataqueRecibido - defensaTotal
+            this.vidaBase = vidaBase - ataqueRecibido - defensaTotal;
         }
     }
 }
