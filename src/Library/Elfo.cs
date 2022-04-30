@@ -170,26 +170,6 @@ namespace Roleplay
         public void Defender(int ataqueRecibido)
         {
             int defensaTotal = this.defensa;
-            foreach(Yelmo yelmo in equipamiento)
-            {
-                int defensaYelmo = yelmo.Defensa;
-                defensaTotal += defensaYelmo;
-            }
-            foreach(Pechera pechera in equipamiento)
-            {
-                int defensaPechera = pechera.Defensa;
-                defensaTotal += defensaPechera;
-            }
-            foreach(Grebas grebas in equipamiento)
-            {
-                int defensaGrebas = grebas.Defensa;
-                defensaTotal += defensaGrebas;
-            }
-            foreach(Botas botas in equipamiento)
-            {
-                int defensaBotas = botas.Defensa;
-                defensaTotal += defensaBotas;
-            }
             this.vidaActual = vidaActual - ataqueRecibido - defensaTotal;
         }
     }
