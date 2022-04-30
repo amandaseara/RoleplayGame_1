@@ -1,21 +1,20 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+
 
 namespace Roleplay
 {
     public class Hacha
     {
-        public Hacha(string nombre, string descripcion, int dano,int defensa)
+        private int daño;
+        public int GetDaño()
         {
-            this.Nombre = nombre;
-            this.Descripcion = descripcion;
-            this.Dano = 100;
-            this.Defensa = 100;
-
+            return this.daño;
         }
-        public string Nombre{get; set;} 
-        public string Descripcion{get; set;}
-        public int Dano{get; set;}
-        public int Defensa{get; set;}
-       
+        public Hacha()
+        {
+            this.daño = 100;
+        }
     }
 }

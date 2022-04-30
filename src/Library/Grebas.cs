@@ -1,17 +1,18 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+
 
 namespace Roleplay
 {
-    public class Grebas
+    public class Grabas
     {
-        public Grebas(string nombre, string descripcion, int defensa)
+        private int ataque = 0;
+        private int defensa = 500;
+
+        public int getDefensa()
         {
-            this.Nombre = nombre;
-            this.Descripcion = descripcion;
-            this.Defensa = 100;
+            return this.defensa;
         }
-        public string Nombre{get;set;}
-        public string Descripcion{get; set;}
-        public int Defensa{get; set;}
     }
 }
