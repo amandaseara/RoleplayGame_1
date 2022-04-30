@@ -82,9 +82,9 @@ namespace Roleplay
             // Si esta vacio, equipo item
             if (this.equipamiento[5].GetType() == 0.GetType())
             {
-                this.equipamiento[5] = escudo;
-                this.ataque += escudo.Daño;
-                this.defensa += escudo.Defensa;
+                this.equipamiento[5] = hacha;
+                this.ataque += hacha.Daño;
+                this.defensa += hacha.Defensa;
             }
         }
 
