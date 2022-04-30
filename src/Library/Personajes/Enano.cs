@@ -11,8 +11,10 @@ namespace Roleplay
         private int ataque = 500;
         public int Ataque { get { return ataque; } }
         private int vidaMax = 500;
-        public int vidaActual = 500;
+        private int vidaActual = 500;
+        public int VidaActual { get { return vidaActual; } }
         private int defensa = 0;
+        public int Defensa { get { return defensa; } }
 
         public Enano(string name)
         {
@@ -82,9 +84,9 @@ namespace Roleplay
             // Si esta vacio, equipo item
             if (this.equipamiento[5].GetType() == 0.GetType())
             {
-                this.equipamiento[5] = escudo;
-                this.ataque += escudo.Daño;
-                this.defensa += escudo.Defensa;
+                this.equipamiento[5] = hacha;
+                this.ataque += hacha.Daño;
+                this.defensa += hacha.Defensa;
             }
         }
 

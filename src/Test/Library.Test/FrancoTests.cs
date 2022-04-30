@@ -1,4 +1,4 @@
-using NUnit.Framework;
+/*using NUnit.Framework;
 using Roleplay;
 
 
@@ -94,4 +94,4 @@ namespace Test.Library
             Assert.AreEqual(nuevaVidadeElfo,elfoTest.VidaActual);
         }
     }
-}
+}*/
