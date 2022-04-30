@@ -264,7 +264,7 @@ namespace Test.Library
         public void equiparHechicero4()
         {
             hechiceroTest.EquiparBaculo(baculoTest);
-            Baculo baculoTest2 = new baculo(100,200);
+            Baculo baculoTest2 = new Baculo(100);
             hechiceroTest.EquiparBaculo(baculoTest2);
             Baculo expected = baculoTest2;
             Baculo busqueda = hechiceroTest.equipamiento[4];
