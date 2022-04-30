@@ -56,6 +56,22 @@ namespace Test.Library
             string expected = "Merlin";
             Assert.AreEqual(expected, nombreHechicero);
         }
+        [Test]
+        public void NameHechizo()
+        {
+            Hechizo hechizo = new Hechizo("Curación",150,0);
+            string nombreHechizo = hechizo.Nombre;
+            string expected = "Curación";
+            Assert.AreEqual(expected, nombreHechizo);
+        }
+        [Test]
+        public void Testvbasehumano()
+        {
+            Humano humano = new Humano("Matias");
+            int vidabase = humano.vidaBase;
+            int expected = 500;
+            Assert.AreEqual(expected, vidabase);
+        }
     }
 
 
