@@ -2,9 +2,9 @@ using System;
 
 namespace Roleplay
 {
-    public class Yelmo
+    public class Grebas
     {
-        public Yelmo(string nombre, string descripcion, int defensa)
+        public Grebas(string nombre, string descripcion, int defensa)
         {
             this.Nombre = nombre;
             this.Descripcion = descripcion;

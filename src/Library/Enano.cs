@@ -1,6 +1,6 @@
 using System;
 
-namespace Roleplay
+namespace Program
 {
     public class Enano
     {
