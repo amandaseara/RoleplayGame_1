@@ -37,7 +37,9 @@ namespace Test.Library
             hechiceroTest = new Hechicero("Richy");
             enanoTest = new Enano("Amanda");
         }
-
+    }
+    }
+/*
         [Test]
         public void equiparElfo0()
         {
@@ -273,3 +275,4 @@ namespace Test.Library
 
     }
 }
+*/
