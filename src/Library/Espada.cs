@@ -12,7 +12,7 @@ namespace clases
         {
             return this.daño;
         }
-        public Espada(int daño)
+        public Espada()
         {
             this.daño = 100;
         }

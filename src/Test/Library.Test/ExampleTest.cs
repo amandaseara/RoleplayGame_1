@@ -17,6 +17,16 @@ namespace Test.Library
             Assert.AreEqual(expected, dañoArco);
         }
 
+
+        [Test]
+        public void dañoEspada()
+        {
+            Espada espada = new Espada();
+            int dañoEspada = espada.GetDaño();
+            int expected = 100;
+            Assert.AreEqual(expected, dañoEspada);
+        }
+
     }
 
 
