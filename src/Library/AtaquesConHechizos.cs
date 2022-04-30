@@ -5,17 +5,26 @@ namespace Roleplay
 {
     public static class AtaquesconHechizo
     {
-        public static void AtaqueconHechizo(Hechicero atacante,string nombredeHechizo, Hechicero defensor)
+        public static void AtaqueaHechicero(Hechicero atacante,string nombredeHechizo, Hechicero defensor)
         {
             int dañodehechizo = atacante.UsarHechizoparaAtaque(nombredeHechizo);
-            if (dañodehechizo==0)
-            {
                 Console.WriteLine($"El hechizo seleccionado era defensivo /n");
-            }
-            else
-            {
                 defensor.Defender(dañodehechizo);
-            }
+        }
+        public static void AtaqueaElfo(Hechicero atacante,string nombredeHechizo, Elfo defensor)
+        {
+            int dañodehechizo = atacante.UsarHechizoparaAtaque(nombredeHechizo);
+            defensor.Defender(dañodehechizo);
+        }
+        public static void AtaqueaEnano(Hechicero atacante,string nombredeHechizo, Enano defensor)
+        {
+            int dañodehechizo = atacante.UsarHechizoparaAtaque(nombredeHechizo);
+            defensor.Defender(dañodehechizo);
+        }
+        public static void AtaqueaHumano(Hechicero atacante,string nombredeHechizo, Humano defensor)
+        {
+            int dañodehechizo = atacante.UsarHechizoparaAtaque(nombredeHechizo);
+            defensor.Defender(dañodehechizo);
         }
         
     }

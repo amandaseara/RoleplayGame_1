@@ -4,19 +4,21 @@ using System.Collections.Generic;
 
 namespace Roleplay
 {
-    public class Enano
+    public class Humano
     {
         private string nombre;
         private ArrayList equipamiento;
         private int ataque = 500;
+        public int Ataque{get{return ataque;}}
         private int vidaMax = 500;
         public int vidaActual = 500;
         private int defensa = 0;
 
-        public Enano(string name)
+        public Humano(string nombre)
         {
-            this.nombre = name;
+            this.nombre = nombre;
             this.equipamiento = new ArrayList();
+            
             int i = 0;
             while (i != 6)
             {
@@ -29,34 +31,38 @@ namespace Roleplay
         public void EquiparYelmo(Yelmo yelmo)
         {
             this.equipamiento[0] = yelmo;
-            this.defensa +=yelmo.Defensa;
+            this.ataque+=yelmo.Daño;
+            this.defensa += yelmo.Defensa;
         }
         public void EquiparPechera(Pechera pechera)
         {
             this.equipamiento[1] = pechera;
-            this.defensa +=pechera.Defensa;
+            this.ataque+=pechera.Daño;
+            this.defensa += pechera.Defensa;
         }
         public void EquiparGrebas(Grebas grebas)
         {
             this.equipamiento[2] = grebas;
-            this.defensa +=grebas.Defensa;
+            this.ataque+=grebas.Daño;
+            this.defensa += grebas.Defensa;
         }
         public void EquiparBotas(Botas botas)
         {
             this.equipamiento[3] = botas;
-            this.defensa +=botas.Defensa;
+            this.ataque+=botas.Daño;
+            this.defensa += botas.Defensa;
         }
         public void EquiparEspada(Espada espada)
         {
             this.equipamiento[4] = espada;
-            this.defensa +=espada.Defensa;
-            this.ataque +=espada.Daño;
+            this.ataque += espada.Daño;
+            this.defensa += espada.Defensa;
         }
         public void EquiparEscudo(Escudo escudo)
         {
             this.equipamiento[5] = escudo;
-            this.defensa +=escudo.Defensa;
-            this.ataque +=escudo.Daño;
+            this.ataque+=escudo.Daño;
+            this.defensa += escudo.Defensa;
         }
 
         //DESEQUIPAR
@@ -65,6 +71,7 @@ namespace Roleplay
             if (yelmo==this.equipamiento[0])
             {
                 this.defensa-=yelmo.Defensa;
+                this.ataque-=yelmo.Daño;
                 this.equipamiento[0]=0;
             }
         }
@@ -72,7 +79,8 @@ namespace Roleplay
         {
             if (pechera==this.equipamiento[1])
             {
-                this.defensa-=pechera.Defensa;
+                this.defensa -= pechera.Defensa;
+                this.ataque-=pechera.Daño;
                 this.equipamiento[1]=1;
             }
         }
@@ -81,6 +89,7 @@ namespace Roleplay
             if (grebas==this.equipamiento[2])
             {
                 this.defensa-=grebas.Defensa;
+                this.ataque-=grebas.Daño;
                 this.equipamiento[2]=2;
             }
         }
@@ -89,6 +98,7 @@ namespace Roleplay
             if (botas==this.equipamiento[3])
             {
                 this.defensa-=botas.Defensa;
+                this.ataque-=botas.Daño;
                 this.equipamiento[3]=3;
             }
         }
@@ -96,8 +106,8 @@ namespace Roleplay
         {
             if (espada==this.equipamiento[4])
             {
-                this.defensa-=espada.Defensa;
                 this.ataque-=espada.Daño;
+                this.defensa-=espada.Defensa;
                 this.equipamiento[4]=4;
             }
         }
@@ -110,64 +120,30 @@ namespace Roleplay
                 this.equipamiento[5]=5;
             }
         }
-
-        //ATAQUES
-        public void AtacarHechicero(Hechicero hechicero)
-        {
-            int dañoTotal = this.ataque;
-            foreach (Espada espada in equipamiento)
-            {
-                dañoTotal = dañoTotal + espada.Daño;
-            }
-
-            hechicero.Defender(dañoTotal);
-        }
-        public void AtacarElfo(Elfo elfo)
-        {
-            int dañoTotal = this.ataque;
-            foreach (Espada espada in equipamiento)
-            {
-                dañoTotal = dañoTotal + espada.Daño;
-            }
-
-            elfo.Defender(dañoTotal);
-        }
-        public void AtacarEnano(Enano enano)
-        {
-            int dañoTotal = this.ataque;
-            foreach (Espada espada in equipamiento)
-            {
-                dañoTotal = dañoTotal + espada.Daño;
-            }
-
-            enano.Defender(dañoTotal);
-        }
-        public void AtacarHumano(Humano humano)
-        {
-            int dañoTotal = this.ataque;
-            foreach (Espada espada in equipamiento)
-            {
-                dañoTotal = dañoTotal + espada.Daño;
-            }
-
-            humano.Defender(dañoTotal);
-        }
-
-
-
         //RECIBIR ATAQUE
         public void Defender(int dañoEntrante)
         {
-            if ((dañoEntrante - this.defensa) > 0)
+            if ( (dañoEntrante-this.defensa) > 0)
             {
-                int dañoRecibido = dañoEntrante - this.defensa;
-                this.vidaActual -= dañoRecibido;
-                Console.WriteLine($"{this.nombre} recibio {dañoRecibido} pts de daño y su nueva vida es {vidaActual}");
+                int dañoRecibido = dañoEntrante-this.defensa;
+                this.vidaActual-=dañoRecibido;
             }
-            else
-            {
-                Console.WriteLine("Ataque Repelido");
-            }
+        }
+        public static void CurarElfo(Elfo elfo)
+        {
+            elfo.SerCurado();
+        }
+        public static void CurarHechicero(Hechicero hechicero)
+        {
+            hechicero.SerCurado();
+        }
+        public static void CurarHumano(Humano humano)
+        {
+            humano.SerCurado();
+        }
+        public static void CurarEnano(Enano enano)
+        {
+            enano.SerCurado();
         }
 
         //RECIBIR CURACION
