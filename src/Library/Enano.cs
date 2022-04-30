@@ -8,7 +8,7 @@ namespace Program
         public Enano(string nombre, int salud, string item)
         {
             this.Nombre = nombre;
-            this.Salud = salud;
+            this.Salud = 500;
             this.Item = item;
         }
     public string Nombre{get;set;}

@@ -8,7 +8,7 @@ namespace Roleplay
         {
             this.Nombre = nombre;
             this.Descripcion = descripcion;
-            this.Defensa = defensa;
+            this.Defensa = 100;
         }
         public string Nombre{get;set;}
         public string Descripcion{get; set;}
