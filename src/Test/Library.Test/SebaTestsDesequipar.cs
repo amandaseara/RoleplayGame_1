@@ -8,6 +8,7 @@ namespace Test.Library
     public class TestDesequipar
     {
         private Arco arcoTest;
+        private Hacha hachaTest;
         private Baculo baculoTest;
         private Botas botasTest;
         private Escudo escudoTest;
@@ -25,6 +26,7 @@ namespace Test.Library
         public void Setup()
         {
             arcoTest = new Arco(100,0);
+            hachaTest = new Hacha(100,0);
             baculoTest = new Baculo(100);
             botasTest = new Botas(0,200);
             escudoTest =new Escudo(0,200);
@@ -42,54 +44,43 @@ namespace Test.Library
         {
             elfoTest.EquiparYelmo(yelmoTest);
             elfoTest.DesequiparYelmo(yelmoTest);
-            int expected = 0;
-            int busqueda = elfoTest.equipamiento[0];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(0, elfoTest.Equipamiento[0]);
         }
+        
         [Test]
         public void DesequiparElfo1()
         {
             elfoTest.EquiparPechera(pecheraTest);
             elfoTest.DesequiparPechera(pecheraTest);
-            int expected = 1;
-            Pechera busqueda = elfoTest.equipamiento[1];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(1, elfoTest.Equipamiento[1]);
         }
         [Test]
         public void DesequiparElfo2()
         {
             elfoTest.EquiparGrebas(grebasTest);
             elfoTest.DesequiparGrebas(grebasTest);
-            int expected = 2;
-            Grebas busqueda = elfoTest.equipamiento[2];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(2, elfoTest.Equipamiento[2]);
         }
         [Test]
         public void DesequiparElfo3()
         {
             elfoTest.EquiparBotas(botasTest);
             elfoTest.DesequiparBotas(botasTest);
-            int expected = 3;
-            Botas busqueda = elfoTest.equipamiento[3];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(3, elfoTest.Equipamiento[3]);
         }
         [Test]
         public void DesequiparElfo4()
         {
             elfoTest.EquiparEspada(espadaTest);
             elfoTest.DesequiparEspada(espadaTest);
-            int expected = 4;
-            Espada busqueda = elfoTest.equipamiento[4];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(4, elfoTest.Equipamiento[4]);
         }
         [Test]
         public void DesequiparElfo5()
         {
             elfoTest.EquiparArco(arcoTest);
             elfoTest.DesequiparArco(arcoTest);
-            int expected = 5;
-            Arco busqueda = elfoTest.equipamiento[5];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(5, elfoTest.Equipamiento[5]);
         }
 
         [Test]
@@ -97,54 +88,42 @@ namespace Test.Library
         {
             enanoTest.EquiparYelmo(yelmoTest);
             enanoTest.DesequiparYelmo(yelmoTest);
-            int expected = 0;
-            int busqueda = enanoTest.equipamiento[0];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(0, enanoTest.Equipamiento[0]);
         }
         [Test]
         public void DesequiparEnano1()
         {
             enanoTest.EquiparPechera(pecheraTest);
             enanoTest.DesequiparPechera(pecheraTest);
-            int expected = 1;
-            Pechera busqueda = enanoTest.equipamiento[1];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(1, enanoTest.Equipamiento[1]);
         }
         [Test]
         public void DesequiparEnano2()
         {
             enanoTest.EquiparGrebas(grebasTest);
             enanoTest.DesequiparGrebas(grebasTest);
-            int expected = 2;
-            Grebas busqueda = enanoTest.equipamiento[2];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(2, enanoTest.Equipamiento[2]);
         }
         [Test]
         public void DesequiparEnano3()
         {
             enanoTest.EquiparBotas(botasTest);
             enanoTest.DesequiparBotas(botasTest);
-            int expected = 3;
-            Botas busqueda = enanoTest.equipamiento[3];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(3, enanoTest.Equipamiento[3]);
         }
         [Test]
         public void DesequiparEnano4()
         {
             enanoTest.EquiparEspada(espadaTest);
             enanoTest.DesequiparEspada(espadaTest);
-            int expected = 4;
-            Espada busqueda = enanoTest.equipamiento[4];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(4, enanoTest.Equipamiento[4]);
         }
         [Test]
         public void DesequiparEnano5()
         {
             enanoTest.EquiparHacha(hachaTest);
             enanoTest.DesequiparHacha(hachaTest);
-            int expected = 5;
-            Hacha busqueda = enanoTest.equipamiento[5];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(5, enanoTest.Equipamiento[5]);
         }
 
         [Test]
@@ -152,54 +131,42 @@ namespace Test.Library
         {
             humanoTest.EquiparYelmo(yelmoTest);
             humanoTest.DesequiparYelmo(yelmoTest);
-            int expected = 0;
-            int busqueda = humanoTest.equipamiento[0];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(0, humanoTest.Equipamiento[0]);
         }
         [Test]
         public void DesequiparHumano1()
         {
             humanoTest.EquiparPechera(pecheraTest);
             humanoTest.DesequiparPechera(pecheraTest);
-            int expected = 1;
-            Pechera busqueda = humanoTest.equipamiento[1];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(1, humanoTest.Equipamiento[1]);
         }
         [Test]
         public void DesequiparHumano2()
         {
             humanoTest.EquiparGrebas(grebasTest);
             humanoTest.DesequiparGrebas(grebasTest);
-            int expected = 2;
-            Grebas busqueda = humanoTest.equipamiento[2];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(2, humanoTest.Equipamiento[2]);
         }
         [Test]
         public void DesequiparHumano3()
         {
             humanoTest.EquiparBotas(botasTest);
             humanoTest.DesequiparBotas(botasTest);
-            int expected = 3;
-            Botas busqueda = humanoTest.equipamiento[3];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(3, humanoTest.Equipamiento[3]);
         }
         [Test]
         public void DesequiparHumano4()
         {
             humanoTest.EquiparEspada(espadaTest);
             humanoTest.DesequiparEspada(espadaTest);
-            int expected = 4;
-            Espada busqueda = humanoTest.equipamiento[4];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(4, humanoTest.Equipamiento[4]);
         }
         [Test]
         public void DesequiparHumano5()
         {
             humanoTest.EquiparEscudo(escudoTest);
             humanoTest.DesequiparEscudo(escudoTest);
-            int expected = 5;
-            Escudo busqueda = humanoTest.equipamiento[5];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(5, humanoTest.Equipamiento[5]);
         }
 
         [Test]
@@ -207,45 +174,35 @@ namespace Test.Library
         {
             hechiceroTest.EquiparYelmo(yelmoTest);
             hechiceroTest.DesequiparYelmo(yelmoTest);
-            int expected = 0;
-            int busqueda = hechiceroTest.equipamiento[0];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(0, hechiceroTest.Equipamiento[0]);
         }
         [Test]
         public void DesequiparHechicero1()
         {
             hechiceroTest.EquiparPechera(pecheraTest);
             hechiceroTest.DesequiparPechera(pecheraTest);
-            int expected = 1;
-            Pechera busqueda = hechiceroTest.equipamiento[1];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(1, hechiceroTest.Equipamiento[1]);
         }
         [Test]
         public void DesequiparHechicero2()
         {
             hechiceroTest.EquiparGrebas(grebasTest);
             hechiceroTest.DesequiparGrebas(grebasTest);
-            int expected = 2;
-            Grebas busqueda = hechiceroTest.equipamiento[2];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(2, hechiceroTest.Equipamiento[2]);
         }
         [Test]
         public void DesequiparHechicero3()
         {
             hechiceroTest.EquiparBotas(botasTest);
             hechiceroTest.DesequiparBotas(botasTest);
-            int expected = 3;
-            Botas busqueda = hechiceroTest.equipamiento[3];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(3, hechiceroTest.Equipamiento[3]);
         }
         [Test]
         public void DesequiparHechicero4()
         {
             hechiceroTest.EquiparBaculo(baculoTest);
             hechiceroTest.DesequiparBaculo(baculoTest);
-            int expected = 4;
-            Espada busqueda = hechiceroTest.equipamiento[4];
-            Assert.AreEqual(expected, busqueda);
+            Assert.AreEqual(4, hechiceroTest.Equipamiento[4]);
         }
     }
 }
