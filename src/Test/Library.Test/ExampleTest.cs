@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Roleplay;
 
 namespace Test.Library
 {
@@ -8,9 +9,12 @@ namespace Test.Library
     {
 
         [Test]
-        public void dummyTest()
+        public void dañoHacha()
         {
-            Assert.True(true);
+            Hacha hacha = new Hacha();
+            int dañoHacha = hacha.GetDaño();
+            int expected = 100;
+            Assert.AreEqual(expected, dañoHacha);
         }
 
     }
