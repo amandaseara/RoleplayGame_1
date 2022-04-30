@@ -9,20 +9,18 @@ namespace clases
     {
         private string nombre;
         private ArrayList equipamiento;
-        private int ataqueBase;
-        private int vidaBase;
-        private int vidaMax;
-        private int defensaBase;
-        public Elfo(ArrayList equipamiento, int ataqueBase, int vidaBase, int defensaBase)
+        private int ataqueBase = 500;
+        private int vidaBase = 500;
+        private int vidaMax = 500;
+        private int defensaBase = 500;
+        public Elfo(string nombre, ArrayList equipamiento)
         {
+            this.nombre = nombre;
             for (int i = 0; i == 5; i++)
             {
                 this.equipamiento.Add(i);
             }
             this.equipamiento = equipamiento;
-            this.ataqueBase = 500; // base attack
-            this.vidaBase = 500; // base health
-            this.defensaBase = 500; // base defense
         }
         public void EquiparYelmo(Yelmo yelmo)
         {
