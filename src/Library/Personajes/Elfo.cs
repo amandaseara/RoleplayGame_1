@@ -35,40 +35,63 @@ namespace Roleplay
         }
         public void EquiparYelmo(Yelmo yelmo)
         {
-            
-            this.equipamiento[0] = yelmo;
-            this.ataque += yelmo.Daño;
-            this.defensa += yelmo.Defensa;
+            // Si esta vacio, equipo intem
+            if (this.equipamiento[0].GetType() == 0.GetType())
+            {
+                this.equipamiento[0] = yelmo;
+                this.ataque += yelmo.Daño;
+                this.defensa += yelmo.Defensa;
+            }
         }
         public void EquiparPechera(Pechera pechera)
         {
-            this.equipamiento[1] = pechera;
-            this.ataque += pechera.Daño;
-            this.defensa += pechera.Defensa;
+            // Si esta vacio, equipo intem
+            if (this.equipamiento[1].GetType() == 0.GetType())
+            {
+                this.equipamiento[1] = pechera;
+                this.ataque += pechera.Daño;
+                this.defensa += pechera.Defensa;
+            }
         }
         public void EquiparGrebas(Grebas grebas)
         {
-            this.equipamiento[2] = grebas;
-            this.ataque += grebas.Daño;
-            this.defensa += grebas.Defensa;
+            // Si esta vacio, equipo intem
+            if (this.equipamiento[2].GetType() == 0.GetType())
+            {
+                this.equipamiento[2] = grebas;
+                this.ataque += grebas.Daño;
+                this.defensa += grebas.Defensa;
+            }
         }
         public void EquiparBotas(Botas botas)
         {
-            this.equipamiento[3] = botas;
-            this.ataque += botas.Daño;
-            this.defensa += botas.Defensa;
+            // Si esta vacio, equipo intem
+            if (this.equipamiento[3].GetType() == 0.GetType())
+            {
+                this.equipamiento[3] = botas;
+                this.ataque += botas.Daño;
+                this.defensa += botas.Defensa;
+            }
         }
         public void EquiparEspada(Espada espada)
         {
-            this.equipamiento[4] = espada;
-            this.ataque += espada.Daño;
-            this.defensa += espada.Defensa;
+            // Si esta vacio, equipo intem
+            if (this.equipamiento[4].GetType() == 0.GetType())
+            {
+                this.equipamiento[4] = espada;
+                this.ataque += espada.Daño;
+                this.defensa += espada.Defensa;
+            }
         }
         public void EquiparArco(Arco arco)
         {
-            this.equipamiento[5] = arco;
-            this.ataque += arco.Daño;
-            this.defensa += arco.Defensa;
+            // Si esta vacio, equipo intem
+            if (this.equipamiento[5].GetType() == 0.GetType())
+            {
+                this.equipamiento[5] = arco;
+                this.ataque += arco.Daño;
+                this.defensa += arco.Defensa;
+            }
         }
 
         //DESEQUIPAR
