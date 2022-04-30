@@ -115,7 +115,7 @@ namespace clases
         }
         public void Defender()
         {
-            int defensaTotal;
+            int defensaTotal = this.defensaBase;
             foreach(Yelmo yelmo in equipamiento)
             {
                 int defensaYelmo = yelmo.GetDefensa();
@@ -124,17 +124,20 @@ namespace clases
             foreach(Pechera pechera in equipamiento)
             {
                 int defensaPechera = pechera.GetDefensa();
+                defensaTotal += defensaPechera;
             }
             foreach(Grebas grebas in equipamiento)
             {
                 int defensaGrebas = grebas.GetDefensa();
+                defensaTotal += defensaGrebas;
             }
             foreach(Botas botas in equipamiento)
             {
                 int defensaBotas = botas.GetDefensa();
+                defensaTotal += defensaBotas;
             }
-            defensaTotal = this.defensaBase + defensaYelmo + defensaPechera + defensaGrebas + defensaBotas;
-            // atacar con defensaTotal
+            // recibir ataque
+            // this.vidaBase = ataqueRecibido - defensaTotal
         }
     }
 }
