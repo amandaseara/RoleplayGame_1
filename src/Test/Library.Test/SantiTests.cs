@@ -65,7 +65,7 @@ namespace Roleplay
             Assert.AreEqual(expected, nombreHechizo);
         }
         [Test]
-        public void Testvbasehumano()
+        public void TestVActualhumano()
         {
             Humano humano = new Humano("Matias");
             int vidabase = humano.vidaActual;
