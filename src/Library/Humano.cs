@@ -10,44 +10,86 @@ namespace Roleplay
         private ArrayList equipamiento;
         private int ataqueBase = 500;
         private int vidaMax = 500;
-        private int vidaBase = 500;
-        private int defensaBase = 500;
+        public int vidaBase = 500;
+        private int defensaBase = 0;
 
-        public Humano(string nombre, ArrayList equipamiento)
+        public Humano(string nombre)
         {
             this.nombre = nombre;
 
-            for (int i = 0; i == 5; i++)
+            this.equipamiento = new ArrayList();
+            for (int i = 0; i == 6; i++)
             {
                 this.equipamiento.Add(i);
             }
-            this.equipamiento = equipamiento;
         }
 
         //EQUIPAR
         public void EquiparYelmo(Yelmo yelmo)
         {
-            this.equipamiento[0] = yelmo;
+            foreach(int posicion in equipamiento)
+            {
+                if (posicion == 0)
+                {
+                    equipamiento[posicion] = yelmo;
+                }
+            }
+            this.defensaBase = this.defensaBase + yelmo.Defensa;
         }
         public void EquiparPechera(Pechera pechera)
         {
-            this.equipamiento[1] = pechera;
+            foreach(int posicion in equipamiento)
+            {
+                if (posicion == 1)
+                {
+                    equipamiento[posicion] = pechera;
+                }
+            }
+            this.defensaBase = this.defensaBase + pechera.Defensa;
         }
         public void EquiparGrebas(Grebas grebas)
         {
-            this.equipamiento[2] = grebas;
+            foreach(int posicion in equipamiento)
+            {
+                if (posicion == 2)
+                {
+                    equipamiento[posicion] = grebas;
+                }
+            }
+            this.defensaBase = this.defensaBase + grebas.Defensa;
         }
         public void EquiparBotas(Botas botas)
         {
-            this.equipamiento[3] = botas;
+            foreach(int posicion in equipamiento)
+            {
+                if (posicion == 3)
+                {
+                    equipamiento[posicion] = botas;
+                }
+            }
+            this.defensaBase = this.defensaBase + botas.Defensa;
         }
         public void EquiparEspada(Espada espada)
         {
-            this.equipamiento[4] = espada;
+            foreach(int posicion in equipamiento)
+            {
+                if (posicion == 4)
+                {
+                    equipamiento[posicion] = espada;
+                }
+            }
+            this.defensaBase = this.defensaBase + espada.Defensa;
         }
         public void EquiparEscudo(Escudo escudo)
         {
-            this.equipamiento[5] = escudo;
+            foreach(int posicion in equipamiento)
+            {
+                if (posicion == 5)
+                {
+                    equipamiento[posicion] = escudo;
+                }
+            }
+            this.defensaBase = this.defensaBase + escudo.Defensa;
         }
 
         //DESEQUIPAR
@@ -74,7 +116,7 @@ namespace Roleplay
         public void DesequiparEscudo()
         {
             this.equipamiento[5] = 5;
-        }
+        }*/
 
         //ATAQUES
         public void AtacarHechicero(Hechicero hechicero)
@@ -82,7 +124,7 @@ namespace Roleplay
             int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                dañoTotal = dañoTotal + espada.GetDaño();
+                dañoTotal = dañoTotal + espada.Daño();
             }
 
             hechicero.defender(dañoTotal); 
@@ -92,7 +134,7 @@ namespace Roleplay
             int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                dañoTotal = dañoTotal + espada.GetDaño();
+                dañoTotal = dañoTotal + espada.Daño();
             }
 
             elfo.defender(dañoTotal); 
@@ -102,48 +144,37 @@ namespace Roleplay
             int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                dañoTotal = dañoTotal + espada.GetDaño();
+                dañoTotal = dañoTotal + espada.Daño();
             }
 
-            Enano.defender(dañoTotal); 
+            enano.defender(dañoTotal); 
         }
         public void AtacarHumano(Humano humano)
         {
             int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
-                dañoTotal = dañoTotal + espada.GetDaño();
+                dañoTotal = dañoTotal + espada.Daño;
             }
 
-            Enano.defender(dañoTotal); 
+            humano.defender(dañoTotal); 
         }
 
-        //RECIBIR ATAQUE
-        public void defender(int daño)
-        {
-            int defensaTotal = this.defensaBase;
-            foreach(Yelmo yelmo in equipamiento)
-            {
-                int defensaYelmo = yelmo.GetDefensa();
-                defensaTotal = defensaTotal + defensaYelmo;
-            }
-            foreach(Pechera pechera in equipamiento)
-            {
-                int defensaPechera = pechera.GetDefensa();
-                defensaTotal = defensaTotal + defensaPechera;
-            }
-            foreach(Grebas grebas in equipamiento)
-            {
-                int defensaGrebas = grebas.GetDefensa();
-                defensaTotal = defensaTotal + defensaGrebas;
-            }
-            foreach(Botas botas in equipamiento)
-            {
-                int defensaBotas = botas.GetDefensa();
-                defensaTotal = defensaTotal + defensaBotas;
-            }
 
-            this.vidaBase = vidaBase - (daño - defensaTotal);
+
+        //RECIBIR ATAQUE
+        public void defender(int dañoEntrante)
+        {
+            if ( (dañoEntrante-this.defensaBase) > 0)
+            {
+                int dañoRecibido = dañoEntrante-this.defensaBase;
+                this.vidaBase-=dañoRecibido;
+                Console.WriteLine($"{this.nombre} recibio {dañoRecibido} pts de daño y su nueva vida es {vidaBase}");
+            }
+            else
+            {
+                Console.WriteLine("Ataque Repelido");
+            }
         }
 
         //RECIBIR CURACION

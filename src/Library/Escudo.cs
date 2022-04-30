@@ -7,12 +7,10 @@ namespace Roleplay
 {
     public class Escudo
     {
-        private int ataque = 0;
-        private int defensa = 500;
+        private int daño = 500;
+        private int defensa = 200;
 
-        public int getDefensa()
-        {
-            return this.defensa;
-        }
+        public int Defensa{get{return defensa;}}
+        
     }
 }
