@@ -10,6 +10,7 @@ namespace Roleplay
         private int vidaMax = 500;
         private int vidaActual = 500;
         private int ataque = 500;
+        private int poder = 500;
         public int Ataque {get{return ataque;}}
         private int defensa = 500;
         private ArrayList equipamiento;
@@ -17,10 +18,11 @@ namespace Roleplay
         public Hechicero(string name)
         {
             this.nombre = name;
-            /*for (int i = 0; i == 5; i++)
+            this.equipamiento = new ArrayList();
+            for (int i = 0; i == 10; i++)
             {
                 this.equipamiento.Add(i);
-            }*/
+            }
         }
         public void AprenderHechizo(string name, int daño, int defensa)
         {
@@ -48,6 +50,16 @@ namespace Roleplay
         {
             this.vidaActual=this.vidaMax;
         }
+        public void EquiparBaculo(Baculo baculo)
+        {   
+            this.equipamiento.Insert(6,baculo);
+            this.poder += baculo.Poder;  
+        }
+        public void RemoverBaculo(Baculo baculo)
+        {
+            this.poder -= baculo.Poder;      
+        }
+
 
     }
 }
