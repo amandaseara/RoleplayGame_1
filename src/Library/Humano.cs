@@ -97,7 +97,7 @@ namespace Roleplay
         {
             foreach(Yelmo yelmo in equipamiento)
             {
-                yelmo = 0;
+                equipamiento[yelmo] = 0;
             }
             this.defensaBase = this.defensaBase - yelmo.Defensa;
         }
@@ -105,7 +105,7 @@ namespace Roleplay
         {
             foreach(Pechera pechera in equipamiento)
             {
-                pechera = 1;
+                equipamiento[pechera] = 1;
             }
             this.defensaBase = this.defensaBase - pechera.Defensa;
         }
@@ -113,7 +113,7 @@ namespace Roleplay
         {
             foreach(Grebas grebas in equipamiento)
             {
-                grebas = 2;
+                equipamiento[grebas] = 2;
             }
             this.defensaBase = this.defensaBase - grebas.Defensa;
         }
@@ -121,7 +121,7 @@ namespace Roleplay
         {
             foreach(Botas botas in equipamiento)
             {
-                botas = 3;
+                equipamiento[botas] = 3;
             }
             this.defensaBase = this.defensaBase - botas.Defensa;
         }
@@ -129,7 +129,7 @@ namespace Roleplay
         {
             foreach(Espada espada in equipamiento)
             {
-                espada = 4;
+                equipamiento[espada] = 4;
             }
             this.defensaBase = this.defensaBase - espada.Defensa;
         }
@@ -137,7 +137,7 @@ namespace Roleplay
         {
             foreach(Escudo escudo in equipamiento)
             {
-                escudo = 5;
+                equipamiento[escudo] = 5;
             }
             this.defensaBase = this.defensaBase - escudo.Defensa;
         }
