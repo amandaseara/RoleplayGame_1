@@ -1,10 +1,10 @@
 using System;
 
-namespace Program
+namespace Roleplay
 {
-    public class Armadura
+    public class Yelmo
     {
-        public Armadura(string nombre, string descripcion, int defensa, string material)
+        public Yelmo(string nombre, string descripcion, int defensa, string material)
         {
             this.Nombre = nombre;
             this.Descripcion = descripcion;
