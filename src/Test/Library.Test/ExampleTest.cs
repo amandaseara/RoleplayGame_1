@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using clases;
+using Roleplay;
 
 namespace Test.Library
 {
