@@ -93,30 +93,54 @@ namespace Roleplay
         }
 
         //DESEQUIPAR
-        public void DesequiparYelmo()
+        public void DesequiparYelmo(Yelmo yelmo)
         {
-            this.equipamiento[0] = 0;
+            foreach(Yelmo yelmo in equipamiento)
+            {
+                yelmo = 0;
+            }
+            this.defensaBase = this.defensaBase - yelmo.Defensa;
         }
-        public void DesequiparPechera()
+        public void DesequiparPechera(Pechera pechera)
         {
-            this.equipamiento[1] = 1;
+            foreach(Pechera pechera in equipamiento)
+            {
+                pechera = 1;
+            }
+            this.defensaBase = this.defensaBase - pechera.Defensa;
         }
-        public void DesequiparGrebas()
+        public void DesequiparGrebas(Grebas grebas)
         {
-            this.equipamiento[2] = 2;
+            foreach(Grebas grebas in equipamiento)
+            {
+                grebas = 2;
+            }
+            this.defensaBase = this.defensaBase - grebas.Defensa;
         }
-        public void DesequiparBotas()
+        public void DesequiparBotas(Botas botas)
         {
-            this.equipamiento[3] = 3;
+            foreach(Botas botas in equipamiento)
+            {
+                botas = 3;
+            }
+            this.defensaBase = this.defensaBase - botas.Defensa;
         }
-        public void DesequiparEspada()
+        public void DesequiparEspada(Espada espada)
         {
-            this.equipamiento[4] = 4;
+            foreach(Espada espada in equipamiento)
+            {
+                espada = 4;
+            }
+            this.defensaBase = this.defensaBase - espada.Defensa;
         }
-        public void DesequiparEscudo()
+        public void DesequiparEscudo(Escudo escudo)
         {
-            this.equipamiento[5] = 5;
-        }*/
+            foreach(Escudo escudo in equipamiento)
+            {
+                escudo = 5;
+            }
+            this.defensaBase = this.defensaBase - escudo.Defensa;
+        }
 
         //ATAQUES
         public void AtacarHechicero(Hechicero hechicero)
