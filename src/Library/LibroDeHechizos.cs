@@ -10,7 +10,7 @@ namespace Roleplay
             Hechizo nuevohechizo = new Hechizo(name,daño,defensa);
             listadehechizos.Add(nuevohechizo);
         }
-        public int UsarhechizodeAtaque(string nombredeHechizo)
+        public int UsarHechizodeAtaque(string nombredeHechizo)
         {
             int daño = 0;
             foreach (Hechizo i in listadehechizos)

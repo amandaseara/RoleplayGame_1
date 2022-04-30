@@ -9,7 +9,8 @@ namespace Roleplay
         public string Nombre{get{return nombre;}}
         private int vidaMax = 500;
         private int vidaActual = 500;
-        private int ataqueBase = 500;
+        private int ataque = 500;
+        public int Ataque {get{return ataque;}}
         private int defensa = 500;
         private ArrayList equipamiento;
         private LibroDeHechizos libro = new LibroDeHechizos();
@@ -25,17 +26,10 @@ namespace Roleplay
         {
             libro.AprenderNuevoHechizo(name,daño,defensa);
         }
-        public void AtacarConHechizoaHechicero(string nombredeHechizo, Hechicero desgraciado)
+        public int UsarHechizoparaAtaque(String nombredeHechizo)
         {
-            int dañoEntrante = libro.UsarhechizodeAtaque(nombredeHechizo);
-            if (dañoEntrante==0)
-            {
-                Console.WriteLine($"El hechizo seleccionado era defensivo /n");
-            }
-            else
-            {
-                desgraciado.Defender(dañoEntrante);
-            }
+            int dañoEntrante = libro.UsarHechizodeAtaque(nombredeHechizo);
+            return dañoEntrante;
         }
         public void Defender(int dañoEntrante)
         {
