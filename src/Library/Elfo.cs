@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -22,94 +22,91 @@ namespace Roleplay
         {
             this.nombre = nombre;
             this.equipamiento = new ArrayList();
-            for (int i = 0; i == 6; i++)
+            int i = 0;
+            while (i != 6)
             {
                 this.equipamiento.Add(i);
+                i++;
             }
         }
         public void EquiparYelmo(Yelmo yelmo)
         {
-            //this.equipamiento.Add(yelmo);
-            foreach (int posicion in equipamiento)
-                if (posicion == 0)
-                    equipamiento[posicion] = yelmo;
+            this.equipamiento[0] = yelmo;
             this.defensa += yelmo.Defensa;
         }
         public void EquiparPechera(Pechera pechera)
         {
-            //this.equipamiento.Add(pechera);
-            foreach (int posicion in equipamiento)
-                if (posicion == 1)
-                    equipamiento[posicion] = pechera;
+            this.equipamiento[1] = pechera;
             this.defensa += pechera.Defensa;
         }
         public void EquiparGrebas(Grebas grebas)
         {
-            //this.equipamiento.Add(grebas);
-            foreach (int posicion in equipamiento)
-                if (posicion == 2)
-                    equipamiento[posicion] = grebas;
-            this.defensa += + grebas.Defensa;
+            this.equipamiento[2] = grebas;
+            this.defensa += grebas.Defensa;
         }
         public void EquiparBotas(Botas botas)
         {
-            //this.equipamiento.Add(botas);
-            foreach (int posicion in equipamiento)
-                if (posicion == 3)
-                    equipamiento[posicion] = botas;
+            this.equipamiento[3] = botas;
             this.defensa += botas.Defensa;
         }
         public void EquiparEspada(Espada espada)
         {
-            //this.equipamiento.Add(espada);
-            foreach (int posicion in equipamiento)
-                if (posicion == 4)
-                    equipamiento[posicion] = espada;
-            this.defensa += espada.Defensa;
+            this.equipamiento[4] = espada;
+            this.ataque += espada.Daño;
         }
         public void EquiparArco(Arco arco)
         {
-            foreach (int posicion in equipamiento)
-                if (posicion == 5)
-                    equipamiento[posicion] = arco;
-            this.defensa += arco.Defensa;
+            this.equipamiento[5] = arco;
+            this.ataque += arco.Daño;
         }
 
-        public void DesequiparYelmo()
+        public void DesequiparYelmo(Yelmo yelmo)
         {
-            foreach (Yelmo yelmo in equipamiento)
-                equipamiento[yelmo] = 0;
-            this.defensa -= yelmo.Defensa;
+            if (yelmo == this.equipamiento[0])
+            {
+                this.defensa -= yelmo.Defensa;
+                this.equipamiento[0] = 0;
+            }
         }
-        public void DesequiparPechera()
+        public void DesequiparPechera(Pechera pechera)
         {
-            foreach (Pechera pechera in equipamiento)
-                equipamiento[pechera] = 1;
-            this.defensa -= pechera.Defensa;
+            if (pechera == this.equipamiento[1])
+            {
+                this.defensa -= pechera.Defensa;
+                this.equipamiento[1] = 1;
+            }
         }
-        public void DesequiparGrebas()
+        public void DesequiparGrebas(Grebas grebas)
         {
-            foreach (Grebas grebas in equipamiento)
-                equipamiento[grebas] = 2;
-            this.defensa -= grebas.Defensa;
+            if (grebas == this.equipamiento[2])
+            {
+                this.defensa -= grebas.Defensa;
+                this.equipamiento[2] = 2;
+            }
         }
-        public void DesequiparBotas()
+        public void DesequiparBotas(Botas botas)
         {
-            foreach (Botas botas in equipamiento)
-                equipamiento[botas] = 3;
-            this.defensa -= botas.Defensa;
+            if (botas == this.equipamiento[3])
+            {
+                this.defensa -= botas.Defensa;
+                this.equipamiento[3] = 3;
+            }
         }
-        public void DesequiparEspada()
+        public void DesequiparEspada(Espada espada)
         {
-            foreach (Espada espada in equipamiento)
-                equipamiento[espada] = 4;
-            this.defensa -= espada.Defensa;
+            if (espada == this.equipamiento[4])
+            {
+                this.ataque -= espada.Daño;
+                this.equipamiento[4] = 4;
+            }
         }
-        public void DesequiparArco()
+        public void DesequiparArco(Arco arco)
         {
-            foreach (Arco arco in equipamiento)
-                equipamiento[arco] = 5;
-            this.defensa -= arco.Defensa;
+            if (arco == this.equipamiento[5])
+            {
+                this.ataque -= arco.Daño;
+                this.equipamiento[5] = 5;
+            }
         }
         public void SerCurado()
         {
@@ -135,7 +132,7 @@ namespace Roleplay
                 int dañoEspada = espada.Daño;
                 dañoTotal += dañoEspada;
             }
-            Hechicero.defender(dañoTotal);
+            Hechicero.Defender(dañoTotal);
         }
         public void AtacarHumano()
         {
@@ -173,4 +170,4 @@ namespace Roleplay
             this.vidaActual = vidaActual - ataqueRecibido - defensaTotal;
         }
     }
-}*/
+}
