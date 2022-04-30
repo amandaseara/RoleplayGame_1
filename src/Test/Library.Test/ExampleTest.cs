@@ -17,7 +17,6 @@ namespace Test.Library
             Assert.AreEqual(expected, dañoArco);
         }
 
-
         [Test]
         public void dañoEspada()
         {

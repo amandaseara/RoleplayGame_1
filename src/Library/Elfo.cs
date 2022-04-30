@@ -22,65 +22,95 @@ namespace clases
         public Elfo(string nombre, ArrayList equipamiento)
         {
             this.nombre = nombre;
-            for (int i = 0; i == 5; i++)
+            this.equipamiento = new ArrayList();
+            for (int i = 0; i == 6; i++)
             {
                 this.equipamiento.Add(i);
             }
-            this.equipamiento = equipamiento;
         }
         public void EquiparYelmo(Yelmo yelmo)
         {
             //this.equipamiento.Add(yelmo);
-            this.equipamiento[0] = yelmo;
+            foreach (int posicion in equipamiento)
+                if (posicion == 0)
+                    equipamiento[posicion] = yelmo;
+            this.defensaBase += yelmo.Defensa;
         }
         public void EquiparPechera(Pechera pechera)
         {
             //this.equipamiento.Add(pechera);
-            this.equipamiento[1] = pechera;
+            foreach (int posicion in equipamiento)
+                if (posicion == 1)
+                    equipamiento[posicion] = pechera;
+            this.defensaBase += pechera.Defensa;
         }
         public void EquiparGrebas(Grebas grebas)
         {
             //this.equipamiento.Add(grebas);
-            this.equipamiento[2] = grebas;
+            foreach (int posicion in equipamiento)
+                if (posicion == 2)
+                    equipamiento[posicion] = grebas;
+            this.defensaBase += + grebas.Defensa;
         }
         public void EquiparBotas(Botas botas)
         {
             //this.equipamiento.Add(botas);
-            this.equipamiento[3] = botas;
+            foreach (int posicion in equipamiento)
+                if (posicion == 3)
+                    equipamiento[posicion] = botas;
+            this.defensaBase += botas.Defensa;
         }
         public void EquiparEspada(Espada espada)
         {
             //this.equipamiento.Add(espada);
-            this.equipamiento[4] = espada;
+            foreach (int posicion in equipamiento)
+                if (posicion == 4)
+                    equipamiento[posicion] = espada;
+            this.defensaBase += espada.Defensa;
         }
         public void EquiparArco(Arco arco)
         {
-            this.equipamiento[5] = arco;
+            foreach (int posicion in equipamiento)
+                if (posicion == 5)
+                    equipamiento[posicion] = arco;
+            this.defensaBase += arco.Defensa;
         }
 
         public void DesequiparYelmo()
         {
-            this.equipamiento[0] = 0;
+            foreach (Yelmo yelmo in equipamiento)
+                equipamiento[yelmo] = 0;
+            this.defensaBase -= yelmo.Defensa;
         }
         public void DesequiparPechera()
         {
-            this.equipamiento[1] = 1;
+            foreach (Pechera pechera in equipamiento)
+                equipamiento[pechera] = 1;
+            this.defensaBase -= pechera.Defensa;
         }
         public void DesequiparGrebas()
         {
-            this.equipamiento[2] = 2;
+            foreach (Grebas grebas in equipamiento)
+                equipamiento[grebas] = 2;
+            this.defensaBase -= grebas.Defensa;
         }
         public void DesequiparBotas()
         {
-            this.equipamiento[3] = 3;
+            foreach (Botas botas in equipamiento)
+                equipamiento[botas] = 3;
+            this.defensaBase -= botas.Defensa;
         }
         public void DesequiparEspada()
         {
-            this.equipamiento[4] = 4;
+            foreach (Espada espada in equipamiento)
+                equipamiento[espada] = 4;
+            this.defensaBase -= espada.Defensa;
         }
         public void DesequiparArco()
         {
-            this.equipamiento[5] = 5;
+            foreach (Arco arco in equipamiento)
+                equipamiento[arco] = 5;
+            this.defensaBase -= arco.Defensa;
         }
         public void SerCurado()
         {
