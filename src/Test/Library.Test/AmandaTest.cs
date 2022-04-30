@@ -155,22 +155,184 @@ namespace Test.Library
             Assert.AreEqual(vidaDespuesAtaque,humanoTest.VidaActual);
         }
 
-        
+        [Test]
+        //Ambos sin items
+        public void TestAtacarElfoElfo()
+        {
+            int dañoEsperado = 0;
+            if ((elfoTest.Ataque - elfoTest2.Defensa) > 0)
+                dañoEsperado = elfoTest.Ataque - elfoTest2.Defensa;
+            int vidaDespuesAtaque = elfoTest2.VidaActual - dañoEsperado;
 
-        /*[Test]
+            Atacar.AtaquedeElfoaElfo(elfoTest,elfoTest2);
+
+            Assert.AreEqual(vidaDespuesAtaque,elfoTest2.VidaActual);
+        }
+
+        [Test]
+        //Defensor con item
+        public void TestAtacarElfoElfoItemDefensa()
+        {
+            int dañoEsperado = 0;
+            if ((elfoTest.Ataque - (elfoTest2.Defensa + botasTest.Defensa)) > 0)
+                dañoEsperado = elfoTest.Ataque - (elfoTest2.Defensa + botasTest.Defensa);
+            int vidaDespuesAtaque = elfoTest2.VidaActual - dañoEsperado;
+
+            elfoTest2.EquiparBotas(botasTest);
+            Atacar.AtaquedeElfoaElfo(elfoTest,elfoTest2);
+
+            Assert.AreEqual(vidaDespuesAtaque,elfoTest2.VidaActual);
+        }
+
+        [Test]
         //Ataque con item
         public void TestAtacarElfoElfoItemAtaque()
         {
             int dañoEsperado = 0;
-            int poderAtacante = hechiceroTest.Ataque + baculoTest.Poder;
-            if ((hechiceroTest.Ataque - hechiceroTest2.Defensa) > 0)
-                dañoEsperado = hechiceroTest.Ataque - hechiceroTest2.Defensa;
-            int vidaDespuesAtaque = hechiceroTest2.VidaActual - dañoEsperado;
+            int poderAtacante = elfoTest.Ataque + arcoTest.Daño;
+            if ((poderAtacante - elfoTest2.Defensa) > 0)
+                dañoEsperado = poderAtacante - elfoTest2.Defensa;
+            int vidaDespuesAtaque = elfoTest2.VidaActual - dañoEsperado;
 
-            hechiceroTest.EquiparBaculo(baculoTest);
-            Atacar.AtaquedeHechiceroaHechicero(hechiceroTest,hechiceroTest2);
+            elfoTest.EquiparArco(arcoTest);
+            Atacar.AtaquedeElfoaElfo(elfoTest,elfoTest2);
 
-            Assert.AreEqual(vidaDespuesAtaque,hechiceroTest2.VidaActual);
-        }*/
+            Assert.AreEqual(vidaDespuesAtaque,elfoTest2.VidaActual);
+        }
+
+        [Test]
+        //Ambos sin items
+        public void TestAtacarElfoEnano()
+        {
+            int dañoEsperado = 0;
+            if ((elfoTest.Ataque - enanoTest.Defensa) > 0)
+                dañoEsperado = elfoTest.Ataque - enanoTest.Defensa;
+            int vidaDespuesAtaque = enanoTest.VidaActual - dañoEsperado;
+
+            Atacar.AtaquedeElfoaEnano(elfoTest,enanoTest);
+
+            Assert.AreEqual(vidaDespuesAtaque,enanoTest.VidaActual);
+        }
+
+        [Test]
+        //Defensor con item
+        public void TestAtacarElfoEnanoItemDefensa()
+        {
+            int dañoEsperado = 0;
+            if ((elfoTest.Ataque - (enanoTest.Defensa + botasTest.Defensa)) > 0)
+                dañoEsperado = elfoTest.Ataque - (enanoTest.Defensa + botasTest.Defensa);
+            int vidaDespuesAtaque = enanoTest.VidaActual - dañoEsperado;
+
+            enanoTest.EquiparBotas(botasTest);
+            Atacar.AtaquedeElfoaEnano(elfoTest,enanoTest);
+
+            Assert.AreEqual(vidaDespuesAtaque,enanoTest.VidaActual);
+        }
+
+        [Test]
+        //Ataque con item
+        public void TestAtacarElfoEnanoItemAtaque()
+        {
+            int dañoEsperado = 0;
+            int poderAtacante = elfoTest.Ataque + arcoTest.Daño;
+            if ((poderAtacante - enanoTest.Defensa) > 0)
+                dañoEsperado = poderAtacante - enanoTest.Defensa;
+            int vidaDespuesAtaque = enanoTest.VidaActual - dañoEsperado;
+
+            elfoTest.EquiparArco(arcoTest);
+            Atacar.AtaquedeElfoaEnano(elfoTest,enanoTest);
+
+            Assert.AreEqual(vidaDespuesAtaque,enanoTest.VidaActual);
+        }
+
+        [Test]
+        //Ambos sin items
+        public void TestAtacarElfoHechicero()
+        {
+            int dañoEsperado = 0;
+            if ((elfoTest.Ataque - hechiceroTest.Defensa) > 0)
+                dañoEsperado = elfoTest.Ataque - hechiceroTest.Defensa;
+            int vidaDespuesAtaque = hechiceroTest.VidaActual - dañoEsperado;
+
+            Atacar.AtaquedeElfoaHechicero(elfoTest,hechiceroTest);
+
+            Assert.AreEqual(vidaDespuesAtaque,hechiceroTest.VidaActual);
+        }
+
+        [Test]
+        //Defensor con item
+        public void TestAtacarElfoHechiceroItemDefensa()
+        {
+            int dañoEsperado = 0;
+            if ((elfoTest.Ataque - (hechiceroTest.Defensa + botasTest.Defensa)) > 0)
+                dañoEsperado = elfoTest.Ataque - (hechiceroTest.Defensa + botasTest.Defensa);
+            int vidaDespuesAtaque = hechiceroTest.VidaActual - dañoEsperado;
+
+            hechiceroTest.EquiparBotas(botasTest);
+            Atacar.AtaquedeElfoaHechicero(elfoTest,hechiceroTest);
+
+            Assert.AreEqual(vidaDespuesAtaque,hechiceroTest.VidaActual);
+        }
+
+        [Test]
+        //Ataque con item
+        public void TestAtacarElfoHechiceroItemAtaque()
+        {
+            int dañoEsperado = 0;
+            int poderAtacante = elfoTest.Ataque + arcoTest.Daño;
+            if ((poderAtacante - hechiceroTest.Defensa) > 0)
+                dañoEsperado = poderAtacante - hechiceroTest.Defensa;
+            int vidaDespuesAtaque = hechiceroTest.VidaActual - dañoEsperado;
+
+            elfoTest.EquiparArco(arcoTest);
+            Atacar.AtaquedeElfoaHechicero(elfoTest,hechiceroTest);
+
+            Assert.AreEqual(vidaDespuesAtaque,hechiceroTest.VidaActual);
+        }
+
+        [Test]
+        //Ambos sin items
+        public void TestAtacarElfoHumano()
+        {
+            int dañoEsperado = 0;
+            if ((elfoTest.Ataque - humanoTest.Defensa) > 0)
+                dañoEsperado = elfoTest.Ataque - humanoTest.Defensa;
+            int vidaDespuesAtaque = humanoTest.VidaActual - dañoEsperado;
+
+            Atacar.AtaquedeElfoaHumano(elfoTest,humanoTest);
+
+            Assert.AreEqual(vidaDespuesAtaque,humanoTest.VidaActual);
+        }
+
+        [Test]
+        //Defensor con item
+        public void TestAtacarElfoHumanoItemDefensa()
+        {
+            int dañoEsperado = 0;
+            if ((elfoTest.Ataque - (humanoTest.Defensa + botasTest.Defensa)) > 0)
+                dañoEsperado = elfoTest.Ataque - (humanoTest.Defensa + botasTest.Defensa);
+            int vidaDespuesAtaque = humanoTest.VidaActual - dañoEsperado;
+
+            humanoTest.EquiparBotas(botasTest);
+            Atacar.AtaquedeElfoaHumano(elfoTest,humanoTest);
+
+            Assert.AreEqual(vidaDespuesAtaque,humanoTest.VidaActual);
+        }
+
+        [Test]
+        //Ataque con item
+        public void TestAtacarElfoHumanoItemAtaque()
+        {
+            int dañoEsperado = 0;
+            int poderAtacante = elfoTest.Ataque + arcoTest.Daño;
+            if ((poderAtacante - humanoTest.Defensa) > 0)
+                dañoEsperado = poderAtacante - humanoTest.Defensa;
+            int vidaDespuesAtaque = humanoTest.VidaActual - dañoEsperado;
+
+            elfoTest.EquiparArco(arcoTest);
+            Atacar.AtaquedeElfoaHumano(elfoTest,humanoTest);
+
+            Assert.AreEqual(vidaDespuesAtaque,humanoTest.VidaActual);
+        }
     }
 }
