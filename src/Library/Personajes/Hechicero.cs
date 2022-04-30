@@ -8,14 +8,14 @@ namespace Roleplay
         private string nombre;
         public string Nombre{get{return nombre;}}
         private int vidaMax = 500;
+        
         private int vidaActual = 500;
-        public int VidaActual{get{return vidaActual;}}
+        public int VidaActual{get {return vidaActual;}}
         private int ataque = 500;
         private int poder = 500;
-        public int Poder{get {return poder;}}
         public int Ataque {get{return ataque;}}
-        private int defensa = 0;
-        public int Defensa{get {return defensa;}}
+        private int defensa = 500;
+        public int Defensa{get{return defensa;}}
         private ArrayList equipamiento;
         private LibroDeHechizos libro = new LibroDeHechizos();
         public Hechicero(string name)
@@ -132,12 +132,20 @@ namespace Roleplay
         }
         public int UsarHechizoparaAtaque(String nombredeHechizo)
         {
-            int dañoSaliente = libro.UsarHechizodeAtaque(nombredeHechizo) + this.poder;
+            int dañoSaliente=0;
+            if (libro.UsarHechizodeAtaque(nombredeHechizo) != 0)
+            {
+                dañoSaliente = libro.UsarHechizodeAtaque(nombredeHechizo) + this.poder;
+            }
+            
             return dañoSaliente;
         }
         public void UsarHechizoparaDefensa(String nombredeHechizo)
         {
-            this.defensa += libro.UsarHechizodeDefensa(nombredeHechizo) + this.poder;
+            if (libro.UsarHechizodeDefensa(nombredeHechizo) != 0)
+            {
+                this.defensa += libro.UsarHechizodeDefensa(nombredeHechizo) + this.poder;
+            }
         }
         public void Defender(int dañoEntrante)
         {

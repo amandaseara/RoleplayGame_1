@@ -8,8 +8,7 @@ namespace Roleplay
         public static void AtaqueaHechicero(Hechicero atacante,string nombredeHechizo, Hechicero defensor)
         {
             int dañodehechizo = atacante.UsarHechizoparaAtaque(nombredeHechizo);
-                Console.WriteLine($"El hechizo seleccionado era defensivo /n");
-                defensor.Defender(dañodehechizo);
+            defensor.Defender(dañodehechizo);
         }
         public static void AtaqueaElfo(Hechicero atacante,string nombredeHechizo, Elfo defensor)
         {

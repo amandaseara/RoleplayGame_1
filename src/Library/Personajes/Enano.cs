@@ -77,14 +77,14 @@ namespace Roleplay
                 this.defensa += espada.Defensa;
             }
         }
-        public void EquiparEscudo(Escudo escudo)
+        public void EquiparHacha(Hacha hacha)
         {
             // Si esta vacio, equipo item
             if (this.equipamiento[5].GetType() == 0.GetType())
             {
-                this.equipamiento[5] = escudo;
-                this.ataque += escudo.Daño;
-                this.defensa += escudo.Defensa;
+                this.equipamiento[5] = hacha;
+                this.ataque += hacha.Daño;
+                this.defensa += hacha.Defensa;
             }
         }
 
@@ -134,12 +134,12 @@ namespace Roleplay
                 this.equipamiento[4] = 4;
             }
         }
-        public void DesequiparEscudo(Escudo escudo)
+        public void DesequiparHacha(Hacha hacha)
         {
-            if (escudo == this.equipamiento[5])
+            if (hacha == this.equipamiento[5])
             {
-                this.defensa -= escudo.Defensa;
-                this.ataque -= escudo.Daño;
+                this.defensa -= hacha.Defensa;
+                this.ataque -= hacha.Daño;
                 this.equipamiento[5] = 5;
             }
         }
