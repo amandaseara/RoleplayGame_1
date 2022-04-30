@@ -70,9 +70,9 @@ namespace clases
             //this.equipamiento.Add(espada);
             this.equipamiento[4] = espada;
         }
-        public void EquiparArma2(Arma2 arma2)
+        public void EquiparArco(Arco arco)
         {
-            this.equipamiento[5] = arma2;
+            this.equipamiento[5] = arco;
         }
 
         public void DesequiparYelmo()
@@ -95,7 +95,7 @@ namespace clases
         {
             this.equipamiento[4] = 4;
         }
-        public void DesequiparArma2()
+        public void DesequiparArco()
         {
             this.equipamiento[5] = 5;
         }
@@ -105,12 +105,12 @@ namespace clases
         }
         public void Atacar()
         {
-            int dañoTotal;
+            int dañoTotal = this.ataqueBase;
             foreach(Espada espada in equipamiento)
             {
                 int dañoEspada = espada.GetDaño();
+                dañoTotal += dañoEspada;
             }
-            dañoTotal = this.ataqueBase + dañoEspada;
             // atacar con dañoTotal
         }
         public void Defender()
