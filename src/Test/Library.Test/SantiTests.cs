@@ -101,7 +101,7 @@ namespace Roleplay
         {
             Hechicero hechicero = new Hechicero("Merlin");
             int defensaHechicero = hechicero.Defensa;
-            int expected = 0;
+            int expected = 500;
             Assert.AreEqual(expected, defensaHechicero);
         }
         [Test]
@@ -111,6 +111,38 @@ namespace Roleplay
             int defensaElfo = elfo.Defensa;
             int expected = 0;
             Assert.AreEqual(expected, defensaElfo);
+        }
+        [Test]
+        public void TestAtaqueElfo()
+        {
+            Elfo elfo = new Elfo("Link");
+            int AtaqueElfo = elfo.Ataque;
+            int expected = 500;
+            Assert.AreEqual(expected, AtaqueElfo);
+        }
+        [Test]
+        public void TestAtaqueEnano()
+        {
+            Enano enano = new Enano("Rey Mysterio");
+            int AtaqueEnano = enano.Ataque;
+            int expected = 500;
+            Assert.AreEqual(expected, AtaqueEnano);
+        }
+        [Test]
+        public void TestAtaqueHechicero()
+        {
+            Hechicero hechicero = new Hechicero("Merlin");
+            int AtaqueHechicero = hechicero.Ataque;
+            int expected = 500;
+            Assert.AreEqual(expected, AtaqueHechicero);
+        }
+        [Test]
+        public void TestAtaqueHumano()
+        {
+            Humano humano = new Humano("Matias");
+            int AtaqueHumano = humano.Ataque;
+            int expected = 500;
+            Assert.AreEqual(expected, AtaqueHumano);
         }
     }
 
