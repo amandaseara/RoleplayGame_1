@@ -21,7 +21,6 @@ namespace Test.Library
         private Enano enanoTest;
         private Hechicero hechiceroTest;
 
-
         [SetUp]
         public void Setup()
         {
@@ -40,7 +39,10 @@ namespace Test.Library
             enanoTest = new Enano("Amanda");
         }
 
+        // Se prueba la funcion de equipar; como cada personaje tiene un inventario diferente, se debe probar el metodo equipar con todos los personajes. A su vez, cada item se almacena en un lugar diferente en el inventario, por lo que tambien hay que testear el equipamiento de los items individualmente.
+
         [Test]
+        // Prueba equipar un yelmo en elfo, aunque tenga otro equipado
         public void equiparElfo0()
         {
             elfoTest.EquiparYelmo(yelmoTest);
@@ -49,7 +51,9 @@ namespace Test.Library
             Yelmo expected = yelmoTest;
             Assert.AreEqual(expected, elfoTest.Equipamiento[0]);
         }
+        
         [Test]
+        // Prueba equipar una pechera en elfo, aunque tenga otra equipada
         public void equiparElfo1()
         {
             elfoTest.EquiparPechera(pecheraTest);
@@ -58,7 +62,9 @@ namespace Test.Library
             Pechera expected = pecheraTest;
             Assert.AreEqual(expected, elfoTest.Equipamiento[1]);
         }
+
         [Test]
+        // Prueba equipar las grebas en elfo, aunque tenga otras equipadas
         public void equiparElfo2()
         {
             elfoTest.EquiparGrebas(grebasTest);
@@ -67,7 +73,9 @@ namespace Test.Library
             Grebas expected = grebasTest;
             Assert.AreEqual(expected, elfoTest.Equipamiento[2]);
         }
+
         [Test]
+        // Prueba equipar las botas en elfo, aunque tenga otras equipadas
         public void equiparElfo3()
         {
             elfoTest.EquiparBotas(botasTest);
@@ -76,7 +84,9 @@ namespace Test.Library
             Botas expected = botasTest;
             Assert.AreEqual(expected, elfoTest.Equipamiento[3]);
         }
+
         [Test]
+        // Prueba equipar una espada en elfo, aunque tenga otra equipada
         public void equiparElfo4()
         {
             elfoTest.EquiparEspada(espadaTest);
@@ -85,7 +95,9 @@ namespace Test.Library
             Espada expected = espadaTest;
             Assert.AreEqual(expected, elfoTest.Equipamiento[4]);
         }
+
         [Test]
+        // Prueba equipar una arco en elfo, aunque tenga otra equipada
         public void equiparElfo5()
         {
             elfoTest.EquiparArco(arcoTest);
@@ -95,8 +107,8 @@ namespace Test.Library
             Assert.AreEqual(expected, elfoTest.Equipamiento[5]);
         }
 
-
-
+        [Test]
+        // Prueba equipar un yelmo en enano, aunque tenga otro equipado
         public void equiparEnano0()
         {
             enanoTest.EquiparYelmo(yelmoTest);
@@ -105,7 +117,9 @@ namespace Test.Library
             Yelmo expected = yelmoTest;
             Assert.AreEqual(expected, enanoTest.Equipamiento[0]);
         }
+
         [Test]
+        // Prueba equipar una pechera en enano, aunque tenga otra equipada
         public void equiparEnano1()
         {
             enanoTest.EquiparPechera(pecheraTest);
@@ -114,7 +128,9 @@ namespace Test.Library
             Pechera expected = pecheraTest;
             Assert.AreEqual(expected, enanoTest.Equipamiento[1]);
         }
+
         [Test]
+        // Prueba equipar las grebas en enano, aunque tenga otras equipadas
         public void equiparEnano2()
         {
             enanoTest.EquiparGrebas(grebasTest);
@@ -123,7 +139,9 @@ namespace Test.Library
             Grebas expected = grebasTest;
             Assert.AreEqual(expected, enanoTest.Equipamiento[2]);
         }
+
         [Test]
+        // Prueba equipar unas botas en enano, aunque tenga otras equipadas
         public void equiparEnano3()
         {
             enanoTest.EquiparBotas(botasTest);
@@ -132,7 +150,9 @@ namespace Test.Library
             Botas expected = botasTest;
             Assert.AreEqual(expected, enanoTest.Equipamiento[3]);
         }
+
         [Test]
+        // Prueba equipar una espada en enano, aunque tenga otra equipada
         public void equiparEnano4()
         {
             enanoTest.EquiparEspada(espadaTest);
@@ -141,7 +161,9 @@ namespace Test.Library
             Espada expected = espadaTest;
             Assert.AreEqual(expected, enanoTest.Equipamiento[4]);
         }
+
         [Test]
+        // Prueba equipar un hacha en enano, aunque tenga otra equipada
         public void equiparEnano5()
         {
             enanoTest.EquiparHacha(hachaTest);
@@ -151,6 +173,8 @@ namespace Test.Library
             Assert.AreEqual(expected, enanoTest.Equipamiento[5]);
         }
 
+        [Test]
+        // Prueba equipar un yelmo en humano, aunque tenga otro equipao
         public void equiparHumano0()
         {
             humanoTest.EquiparYelmo(yelmoTest);
@@ -159,7 +183,9 @@ namespace Test.Library
             Yelmo expected = yelmoTest;
             Assert.AreEqual(expected, humanoTest.Equipamiento[0]);
         }
+
         [Test]
+        // Prueba equipar una pechera en humano, aunque tenga otra equipada
         public void equiparHumano1()
         {
             humanoTest.EquiparPechera(pecheraTest);
@@ -168,7 +194,9 @@ namespace Test.Library
             Pechera expected = pecheraTest;
             Assert.AreEqual(expected, humanoTest.Equipamiento[1]);
         }
+
         [Test]
+        // Prueba equipar unas grebas en humano, aunque tenga otras equipadas
         public void equiparHumano2()
         {
             humanoTest.EquiparGrebas(grebasTest);
@@ -177,7 +205,9 @@ namespace Test.Library
             Grebas expected = grebasTest;
             Assert.AreEqual(expected, humanoTest.Equipamiento[2]);
         }
+
         [Test]
+        // Prueba equipar unas botas en humano, aunque tenga otras equipadas
         public void equiparHumano3()
         {
             humanoTest.EquiparBotas(botasTest);
@@ -186,7 +216,9 @@ namespace Test.Library
             Botas expected = botasTest;
             Assert.AreEqual(expected, humanoTest.Equipamiento[3]);
         }
+
         [Test]
+        // Prueba equipar una espada en humano, aunque tenga otra equipada
         public void equiparHumano4()
         {
             humanoTest.EquiparEspada(espadaTest);
@@ -195,7 +227,9 @@ namespace Test.Library
             Espada expected = espadaTest;
             Assert.AreEqual(expected, humanoTest.Equipamiento[4]);
         }
+
         [Test]
+        // Prueba equipar un escudo en humano, aunque tenga otro equipado
         public void equiparHumano5()
         {
             humanoTest.EquiparEscudo(escudoTest);
@@ -205,6 +239,8 @@ namespace Test.Library
             Assert.AreEqual(expected, humanoTest.Equipamiento[5]);
         }
 
+        [Test]
+        // Prueba equipar un yelmo en hechicero, aunque tenga otro equipado
         public void equiparHechicero0()
         {
             hechiceroTest.EquiparYelmo(yelmoTest);
@@ -213,7 +249,9 @@ namespace Test.Library
             Yelmo expected = yelmoTest;
             Assert.AreEqual(expected, hechiceroTest.Equipamiento[0]);
         }
+
         [Test]
+        // Prueba equipar una pechera en hechicero, aunque tenga otra equipada
         public void equiparHechicero1()
         {
             hechiceroTest.EquiparPechera(pecheraTest);
@@ -222,7 +260,9 @@ namespace Test.Library
             Pechera expected = pecheraTest;
             Assert.AreEqual(expected, hechiceroTest.Equipamiento[1]);
         }
+
         [Test]
+        // Prueba equipar unas grebas en hechicero, aunque tenga otras equipadas
         public void equiparHechicero2()
         {
             hechiceroTest.EquiparGrebas(grebasTest);
@@ -231,7 +271,9 @@ namespace Test.Library
             Grebas expected = grebasTest;
             Assert.AreEqual(expected, hechiceroTest.Equipamiento[2]);
         }
+
         [Test]
+        // Prueba equipar unas botas en hechicero, aunque tenga otras equipadas
         public void equiparHechicero3()
         {
             hechiceroTest.EquiparBotas(botasTest);
@@ -240,7 +282,9 @@ namespace Test.Library
             Botas expected = botasTest;
             Assert.AreEqual(expected, hechiceroTest.Equipamiento[3]);
         }
+
         [Test]
+        // Prueba equipar un baculo en hechicero, aunque tenga otro equipado
         public void equiparHechicero4()
         {
             hechiceroTest.EquiparBaculo(baculoTest);

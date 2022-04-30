@@ -23,7 +23,7 @@ namespace Roleplay
             int defensaEspada = espada.Defensa;
             int expected = 75;
             Assert.AreEqual(expected, defensaEspada);
-        }
+        } 
         [Test]
         public void dañoHechizo()
         {
@@ -31,7 +31,7 @@ namespace Roleplay
             int dañoHechizo = hechizo.daño;
             int expected = 100;
             Assert.AreEqual(expected, dañoHechizo);
-        }
+        } 
         [Test]
         public void defensaHechizo()
         {
@@ -57,13 +57,13 @@ namespace Roleplay
             Assert.AreEqual(expected, nombreHechicero);
         }
         [Test]
-        public void NameHechizo()
+        public void CuraHechizo()
         {
-            Hechizo hechizo = new Hechizo("Curación",150,0);
-            string nombreHechizo = hechizo.Nombre;
-            string expected = "Curación";
-            Assert.AreEqual(expected, nombreHechizo);
-        }
+            Hechizo hechizo = new Hechizo("Incendio",150,0);
+            int DañoHechizo = hechizo.daño;
+            int expected = 150;
+            Assert.AreEqual(expected, DañoHechizo);
+        }     
         [Test]
         public void TestVActualHumano()
         {
@@ -101,7 +101,7 @@ namespace Roleplay
         {
             Hechicero hechicero = new Hechicero("Merlin");
             int defensaHechicero = hechicero.Defensa;
-            int expected = 0;
+            int expected = 500;
             Assert.AreEqual(expected, defensaHechicero);
         }
         [Test]
@@ -112,6 +112,40 @@ namespace Roleplay
             int expected = 0;
             Assert.AreEqual(expected, defensaElfo);
         }
+        [Test]
+        public void TestAtaqueElfo()
+        {
+            Elfo elfo = new Elfo("Link");
+            int AtaqueElfo = elfo.Ataque;
+            int expected = 500;
+            Assert.AreEqual(expected, AtaqueElfo);
+        }
+        [Test]
+        public void TestAtaqueEnano()
+        {
+            Enano enano = new Enano("Rey Mysterio");
+            int AtaqueEnano = enano.Ataque;
+            int expected = 500;
+            Assert.AreEqual(expected, AtaqueEnano);
+        }
+        [Test]
+        public void TestAtaqueHechicero()
+        {
+            Hechicero hechicero = new Hechicero("Merlin");
+            int AtaqueHechicero = hechicero.Ataque;
+            int expected = 500;
+            Assert.AreEqual(expected, AtaqueHechicero);
+        }
+        [Test]
+        public void TestAtaqueHumano()
+        {
+            Humano humano = new Humano("Matias");
+            int AtaqueHumano = humano.Ataque;
+            int expected = 500;
+            Assert.AreEqual(expected, AtaqueHumano);
+        }/*Los Tests se tratan de que coincidan tanto las cosas asignadas, Primero Creamos un personaje/hechizo/ataque, las llamamos a traves de 
+        (<variable>.accion), Asignamos un expected, un int o string que se espera que sea con nuestra creación, 
+        todas están hechas para que sean todas correctas. Se usa Assert.Equal para hacer la comparación para que coincida.*/
     }
 
 
