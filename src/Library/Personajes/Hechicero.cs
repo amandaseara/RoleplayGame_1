@@ -17,6 +17,8 @@ namespace Roleplay
         private int defensa = 500;
         public int Defensa{get{return defensa;}}
         private ArrayList equipamiento;
+        public ArrayList Equipamiento{get{return equipamiento;}}
+
         private LibroDeHechizos libro = new LibroDeHechizos();
         public Hechicero(string name)
         {
