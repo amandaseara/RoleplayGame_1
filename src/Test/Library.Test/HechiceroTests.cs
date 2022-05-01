@@ -41,7 +41,7 @@ namespace Test.Library
         }
         [Test]
         /// <summary>
-        /// Pruebo el hechizo inicial con el que se crean los magos y ademas si funciona conjuntamente
+        /// Pruebo el hechizo inicial con el que se crean los magos y ademas si funciona
         /// el ataque entre magos
         /// </summary>
         public void HechizoInicial()
@@ -74,7 +74,9 @@ namespace Test.Library
             Assert.AreEqual(vidaDespuesAtaque, hechiceroTest2.VidaActual);          
 
         }
+        
         [Test]
+        // Prueba si se aumenta correctamente la defensa al utilizar un hechizo creado
         public void Hechizonuevo_defender()
         {
             int dañoDeHechizo = 221;
@@ -86,6 +88,7 @@ namespace Test.Library
         }
         
         [Test]
+        // Pruebo si cuando se crean dos hechizos iguales y se intentan añadir al libro de hechizos, se mantiene el primero con su atributo defensa intacto
         public void Hechizosnuevos_defender2()
         {
             int dañoDeHechizo = 221;
@@ -98,7 +101,9 @@ namespace Test.Library
             hechiceroTest.UsarHechizoparaDefensa("cataplumba");
             Assert.AreEqual(defensaDespuesdeHechizo, hechiceroTest.Defensa);
         }
+
         [Test]
+        // Pruebo si cuando se crean dos hechizos iguales y se intentan añadir al libro de hechizos, se mantiene el primero con su atributo daño intacto
         public void Hechizonuevos_daño()
         {
             int dañoDeHechizo = 221;
@@ -116,7 +121,9 @@ namespace Test.Library
             AtaquesconHechizo.AtaqueaHechicero(hechiceroTest,"cataplumba",hechiceroTest2);
             Assert.AreEqual(vidaDespuesAtaque, hechiceroTest2.VidaActual);          
         }
+
         [Test]
+        // Pruebo si al grabar dos hechizos, se almacena correctamente la defensa del primero
         public void Hechizosnuevos_defender2_Hechizosdistintos_1()
         {
             int dañoDeHechizo = 221;
@@ -129,7 +136,9 @@ namespace Test.Library
             hechiceroTest.UsarHechizoparaDefensa("cataplumba");
             Assert.AreEqual(defensaDespuesdeHechizo, hechiceroTest.Defensa);
         }
+
         [Test]
+        // Pruebo si al grabar dos hechizos, se almacena correctamente la defensa del segundo
         public void Hechizosnuevos_defender2_Hechizosdistintos_2()
         {
             int dañoDeHechizo = 221;
@@ -142,7 +151,9 @@ namespace Test.Library
             hechiceroTest.UsarHechizoparaDefensa("Silantro");
             Assert.AreEqual(defensaDespuesdeHechizo, hechiceroTest.Defensa);
         }
+
         [Test]
+        // Pruebo si al utilizar dos veces el mismo hechizo de forma defensiva, incrementa correctamente la defensa
         public void AtacarConElMismoHechizo2Veces()
         {
             int dañoDeHechizo = 221;
@@ -153,6 +164,9 @@ namespace Test.Library
             hechiceroTest.UsarHechizoparaDefensa("cataplumba");
             Assert.AreEqual(defensaDespuesdeHechizo, hechiceroTest.Defensa);
         }
+
+        [Test]
+        // Pruebo atacar al elfo con un hechizo
         public void AtacarAElfo()
         {
             int dañoDeHechizo = 221;
@@ -166,6 +180,9 @@ namespace Test.Library
             AtaquesconHechizo.AtaqueaElfo(hechiceroTest,"ataplumbac",elfoTest);
             Assert.AreEqual(vidaDespuesAtaque, elfoTest.VidaActual);
         }
+
+        [Test]
+        // Pruebo atacar al enano con un hechizo
         public void AtacarAEnano()
         {
             int dañoDeHechizo = 221;
@@ -179,6 +196,9 @@ namespace Test.Library
             AtaquesconHechizo.AtaqueaEnano(hechiceroTest,"ataplumbac",enanoTest);
             Assert.AreEqual(vidaDespuesAtaque, enanoTest.VidaActual);
         }
+
+        [Test]
+        // Pruebo atacar al humano con un hechizo
         public void AtacarAHumano()
         {
             int dañoDeHechizo = 221;
