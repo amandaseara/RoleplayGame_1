@@ -7,6 +7,8 @@ namespace Roleplay
     public class Enano
     {
         private string nombre;
+        public string Nombre{get{return nombre;}}
+
         private ArrayList equipamiento;
         public ArrayList Equipamiento{get{return equipamiento;}}
 
