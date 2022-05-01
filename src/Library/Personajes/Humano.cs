@@ -8,6 +8,8 @@ namespace Roleplay
     {
         private string nombre;
         private ArrayList equipamiento;
+        public ArrayList Equipamiento{get{return equipamiento;}}
+
         private int ataque = 500;
         public int Ataque{get{return ataque;}}
         private int vidaMax = 500;

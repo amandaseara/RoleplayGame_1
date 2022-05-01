@@ -1,4 +1,4 @@
-/*using NUnit.Framework;
+using NUnit.Framework;
 using Roleplay;
 
 namespace Test.Library
@@ -8,7 +8,10 @@ namespace Test.Library
     public class TestsItems
     {
 
+        // Comprueba que se asignen de manera correcta los daños y las defensas de los items.
+
         [Test]
+        // Comprueba que se asigne de manera correcta el poder del baculo
         public void poderBaculo()
         {
             Baculo baculo = new Baculo(100);
@@ -18,6 +21,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el daño del arco
         public void dañoArco()
         {
             Arco arco = new Arco(100, 0);
@@ -27,6 +31,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta la defensa del arco
         public void defensaArco()
         {
             Arco arco = new Arco(100, 0);
@@ -36,6 +41,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el daño de la espada
         public void dañoEspada()
         {
             Espada espada = new Espada(100, 0);
@@ -45,6 +51,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta la defensa de la espada
         public void defensaEspada()
         {
             Espada espada = new Espada(100, 0);
@@ -54,6 +61,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el daño de las botas
         public void dañoBotas()
         {
             Botas botas = new Botas(100, 0);
@@ -63,6 +71,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta la defensa de las botas
         public void defensaBotas()
         {
             Botas botas = new Botas(100, 0);
@@ -72,6 +81,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el daño del escudo
         public void dañoEscudo()
         {
             Escudo escudo = new Escudo(100, 0);
@@ -81,6 +91,7 @@ namespace Test.Library
         }
         
         [Test]
+        // Comprueba que se asigne de manera correcta la defensa del escudo
         public void defensaEscudo()
         {
             Escudo escudo = new Escudo(100, 0);
@@ -90,6 +101,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el daño de las grebas
         public void dañoGrebas()
         {
             Grebas grebas = new Grebas(100, 0);
@@ -99,6 +111,7 @@ namespace Test.Library
         }
         
         [Test]
+        // Comprueba que se asigne de manera correcta la defensa de las grebas
         public void defensaGrebas()
         {
             Grebas grebas = new Grebas(100, 0);
@@ -108,6 +121,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el daño del hacha
         public void dañoHacha()
         {
             Hacha hacha = new Hacha(100, 0);
@@ -117,6 +131,7 @@ namespace Test.Library
         }
         
         [Test]
+        // Comprueba que se asigne de manera correcta la defensa del hacha
         public void defensaHacha()
         {
             Hacha hacha = new Hacha(100, 0);
@@ -126,6 +141,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el daño de la pechera
         public void dañoPechera()
         {
             Pechera pechera = new Pechera(100, 0);
@@ -135,6 +151,7 @@ namespace Test.Library
         }
         
         [Test]
+        // Comprueba que se asigne de manera correcta la defensa de la pechera
         public void defensaPechera()
         {
             Pechera pechera = new Pechera(100, 0);
@@ -144,6 +161,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el daño del yelmo
         public void dañoYelmo()
         {
             Yelmo yelmo = new Yelmo(100, 0);
@@ -153,6 +171,7 @@ namespace Test.Library
         }
         
         [Test]
+        // Comprueba que se asigne de manera correcta la defensa del yelmo
         public void defensaYelmo()
         {
             Yelmo yelmo = new Yelmo(100, 0);
@@ -162,6 +181,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el nombre del hechizo
         public void nombreHechizo()
         {
             Hechizo hechizo = new Hechizo("Bola de fuego", 100, 0);
@@ -171,6 +191,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el nombre del hechizo (cuando es vacio)
         public void nombreHechizo2()
         {
             Hechizo hechizo = new Hechizo("", 100, 0);
@@ -180,6 +201,7 @@ namespace Test.Library
         }
 
         [Test]
+        // Comprueba que se asigne de manera correcta el daño del hechizo
         public void dañoHechizo()
         {
             Hechizo hechizo = new Hechizo("Bola de fuego", 100, 0);
@@ -189,6 +211,7 @@ namespace Test.Library
         }
         
         [Test]
+        // Comprueba que se asigne de manera correcta la defensa del hechizo
         public void defensaHechizo()
         {
             Hechizo hechizo = new Hechizo("Bola de fuego", 100, 0);
@@ -196,8 +219,5 @@ namespace Test.Library
             int expected = 0;
             Assert.AreEqual(expected, defensaHechizo);
         }
-
     }
-
-
-}*/
+}
