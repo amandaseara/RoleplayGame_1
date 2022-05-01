@@ -13,8 +13,10 @@ namespace Roleplay
         private int ataque = 500;
         public int Ataque { get { return ataque; } }
         private int vidaMax = 500;
-        public int vidaActual = 500;
+        private int vidaActual = 500;
+        public int VidaActual { get { return vidaActual; } }
         private int defensa = 0;
+        public int Defensa { get { return defensa; } }
 
         public Enano(string name)
         {
