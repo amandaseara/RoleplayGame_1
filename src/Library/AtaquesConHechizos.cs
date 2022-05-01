@@ -5,6 +5,7 @@ namespace Roleplay
 {
     public static class AtaquesconHechizo
     {
+        // En esta clase se realizan los ataques con hechizos
         public static void AtaqueaHechicero(Hechicero atacante,string nombredeHechizo, Hechicero defensor)
         {
             int dañodehechizo = atacante.UsarHechizoparaAtaque(nombredeHechizo);
