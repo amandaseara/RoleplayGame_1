@@ -1,6 +1,7 @@
 using System.Collections;
 namespace Roleplay
 {
+    // El principio utilizado para los hechizos es SRP, ya que tienen la unica responsabilidad de crearse a sí mismo.
     public class Hechizo
     {
 

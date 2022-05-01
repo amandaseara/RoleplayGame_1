@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 namespace Roleplay
 {
+    // En el libro de hechizos en particular se utiliza Expert, ya que hace todo lo posible con la informacion que tiene.
     public class LibroDeHechizos
     {
         private List<Hechizo> listadehechizos;
