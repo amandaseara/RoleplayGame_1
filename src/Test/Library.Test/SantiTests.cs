@@ -1,4 +1,4 @@
-/*using NUnit.Framework;
+using NUnit.Framework;
 
 
 namespace Roleplay
@@ -76,7 +76,7 @@ namespace Roleplay
         public void TestVActualEnano()
         {
             Enano enano = new Enano("Rey Mysterio");
-            int vidabase = enano.vidaActual;
+            int vidabase = enano.VidaActual;
             int expected = 500;
             Assert.AreEqual(expected, vidabase);
         }
@@ -149,4 +149,4 @@ namespace Roleplay
     }
 
 
-}*/
+}
