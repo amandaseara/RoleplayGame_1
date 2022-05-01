@@ -37,7 +37,7 @@ namespace Test.Library
             humanoTest = new Humano("Tusam");
             hechiceroTest = new Hechicero("Richy");
             hechiceroTest2 = new Hechicero("Pablo");
-            enanoTest = new Enano("Amanda");
+            enanoTest = new Enano("Malboro");
         }
         [Test]
         /// <summary>

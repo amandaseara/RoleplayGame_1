@@ -36,7 +36,7 @@ namespace Test.Library
             elfoTest = new Elfo("Raul");
             humanoTest = new Humano("Tusam");
             hechiceroTest = new Hechicero("Richy");
-            enanoTest = new Enano("Amanda");
+            enanoTest = new Enano("Yoda");
         }
 
         // Se prueba la funcion de equipar; como cada personaje tiene un inventario diferente, se debe probar el metodo equipar con todos los personajes. A su vez, cada item se almacena en un lugar diferente en el inventario, por lo que tambien hay que testear el equipamiento de los items individualmente.
