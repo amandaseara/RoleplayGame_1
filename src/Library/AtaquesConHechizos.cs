@@ -3,6 +3,7 @@ using System;
 
 namespace Roleplay
 {
+    // El principio utilizado para los ataques con hechizos es SRP, ya que tienen la unica responsabilidad de realizar el ataque.
     public static class AtaquesconHechizo
     {
         // En esta clase se realizan los ataques con hechizos

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace Roleplay
 {
+    // El patron utilizado en los personajes es expert, debido a que se añadieron todos los metodos que utilizan los datos de los personajes en los mismos.
     public class Humano
     {
         private string nombre;
