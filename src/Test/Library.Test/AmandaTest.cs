@@ -39,8 +39,14 @@ namespace Test.Library
             enanoTest2 = new Enano("Thomas2");
         }
 
+        //Se prueba la funcion de atacar.
+        //Cada personaje tiene una funcion diferente para atacar a cada clase de personaje existente
+        //Se deben probar cada metodo de ataque de cada personaje.
+        //Ademas pueden atacar con o sin items de ataque y a personajes con y sin items de defensa.
+
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por otro hechicero sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarHechiceroHechicero()
         {
             int dañoEsperado = 0;
@@ -54,7 +60,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por otro hechicero sea correcta
+        //cuando el defensor posee algun item de defensa
         public void TestAtacarHechiceroHechiceroItemDefensa()
         {
             int dañoEsperado = 0;
@@ -69,7 +76,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un hechicero sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarHechiceroElfo()
         {
             int dañoEsperado = 0;
@@ -83,7 +91,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un hechicero sea correcta
+        //cuando el elfo posee algun item de defensa
         public void TestAtacarHechiceroElfoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -98,7 +107,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje enano atacado por un hechicero sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarHechiceroEnano()
         {
             int dañoEsperado = 0;
@@ -112,7 +122,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje enano atacado por un hechicero sea correcta
+        //cuando el enano posee algun item de defensa
         public void TestAtacarHechiceroEnanoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -127,7 +138,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje humano atacado por un hechicero sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarHechiceroHumano()
         {
             int dañoEsperado = 0;
@@ -141,7 +153,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje humano atacado por un hechicero sea correcta
+        //cuando el humano posee algun item de defensa
         public void TestAtacarHechiceroHumanoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -156,7 +169,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por otro elfo sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarElfoElfo()
         {
             int dañoEsperado = 0;
@@ -170,7 +184,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un elfo sea correcta
+        //cuando el defensor posee algun item de defensa
         public void TestAtacarElfoElfoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -185,7 +200,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un elfo sea correcta
+        //cuando el atacante posee algun item de ataque
         public void TestAtacarElfoElfoItemAtaque()
         {
             int dañoEsperado = 0;
@@ -201,7 +217,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje enano atacado por un elfo sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarElfoEnano()
         {
             int dañoEsperado = 0;
@@ -215,7 +232,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje enano atacado por un elfo sea correcta
+        //cuando el enano posee algun item de defensa
         public void TestAtacarElfoEnanoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -230,7 +248,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje enano atacado por un elfo sea correcta
+        //cuando el elfo posee algun item de ataque
         public void TestAtacarElfoEnanoItemAtaque()
         {
             int dañoEsperado = 0;
@@ -246,7 +265,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por un elfo sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarElfoHechicero()
         {
             int dañoEsperado = 0;
@@ -260,7 +280,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por un elfo sea correcta
+        //cuando el hechicero posee algun item de defensa
         public void TestAtacarElfoHechiceroItemDefensa()
         {
             int dañoEsperado = 0;
@@ -275,7 +296,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por un elfo sea correcta
+        //cuando el elfo posee algun item de ataque
         public void TestAtacarElfoHechiceroItemAtaque()
         {
             int dañoEsperado = 0;
@@ -291,7 +313,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje humano atacado por un elfo sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarElfoHumano()
         {
             int dañoEsperado = 0;
@@ -305,7 +328,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje humano atacado por un elfo sea correcta
+        //cuando el humano posee algun item de defensa
         public void TestAtacarElfoHumanoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -320,7 +344,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje humano atacado por un elfo sea correcta
+        //cuando el elfo posee algun item de ataque
         public void TestAtacarElfoHumanoItemAtaque()
         {
             int dañoEsperado = 0;
@@ -336,7 +361,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un humano sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarHumanoElfo()
         {
             int dañoEsperado = 0;
@@ -350,7 +376,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un humano sea correcta
+        //cuando el elfo posee algun item de defensa
         public void TestAtacarHumanoElfoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -365,7 +392,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un humano sea correcta
+        //cuando el humano posee algun item de ataque
         public void TestAtacarHumanoElfoItemAtaque()
         {
             int dañoEsperado = 0;
@@ -381,7 +409,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje enano atacado por un humano sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarHumanoEnano()
         {
             int dañoEsperado = 0;
@@ -395,7 +424,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje enano atacado por un humano sea correcta
+        //cuando el enano posee algun item de defensa
         public void TestAtacarHumanoEnanoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -410,7 +440,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje enano atacado por un humano sea correcta
+        //cuando el humano posee algun item de ataque
         public void TestAtacarHumanoEnanoItemAtaque()
         {
             int dañoEsperado = 0;
@@ -426,7 +457,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por un humano sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarHumanoHechicero()
         {
             int dañoEsperado = 0;
@@ -440,7 +472,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por un humano sea correcta
+        //cuando el hechicero posee algun item de defensa
         public void TestAtacarHumanoHechiceroItemDefensa()
         {
             int dañoEsperado = 0;
@@ -455,7 +488,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por un humano sea correcta
+        //cuando el humano posee algun item de ataque
         public void TestAtacarHumanoHechiceroItemAtaque()
         {
             int dañoEsperado = 0;
@@ -471,7 +505,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje humano atacado por otro humano sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarHumanoHumano()
         {
             int dañoEsperado = 0;
@@ -485,7 +520,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje humano atacado por otro humano sea correcta
+        //cuando el defendor posee algun item de defensa
         public void TestAtacarHumanoHumanoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -500,7 +536,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje humano atacado por otro humano sea correcta
+        //cuando el atacante posee algun item de ataque
         public void TestAtacarHumanoHumanoItemAtaque()
         {
             int dañoEsperado = 0;
@@ -516,7 +553,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un enano sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarEnanoElfo()
         {
             int dañoEsperado = 0;
@@ -530,7 +568,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un enano sea correcta
+        //cuando el elfo posee algun item de defensa
         public void TestAtacarEnanoElfoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -545,7 +584,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje elfo atacado por un enano sea correcta
+        //cuando el enano posee algun item de ataque
         public void TestAtacarEnanoElfoItemAtaque()
         {
             int dañoEsperado = 0;
@@ -561,7 +601,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje enano atacado por otro enano sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarEnanoEnano()
         {
             int dañoEsperado = 0;
@@ -575,7 +616,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje enano atacado por otro enano sea correcta
+        //cuando el defensor posee algun item de defensa
         public void TestAtacarEnanoEnanoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -590,7 +632,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje enano atacado por otro enano sea correcta
+        //cuando el atacante posee algun item de ataque
         public void TestAtacarEnanoEnanoItemAtaque()
         {
             int dañoEsperado = 0;
@@ -606,7 +649,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por un enano sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarEnanoHechicero()
         {
             int dañoEsperado = 0;
@@ -620,7 +664,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por un enano sea correcta
+        //cuando el hechicero posee algun item de defensa
         public void TestAtacarEnanoHechiceroItemDefensa()
         {
             int dañoEsperado = 0;
@@ -635,7 +680,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje hechicero atacado por un enano sea correcta
+        //cuando el enano posee algun item de ataque
         public void TestAtacarEnanoHechiceroItemAtaque()
         {
             int dañoEsperado = 0;
@@ -651,7 +697,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ambos sin items
+        //Comprueba que la reduccion en la vida del personaje humano atacado por un enano sea correcta
+        //cuando ambos personajes no tienen items
         public void TestAtacarEnanoHumano()
         {
             int dañoEsperado = 0;
@@ -665,7 +712,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Defensor con item
+        //Comprueba que la reduccion en la vida del personaje humano atacado por un enano sea correcta
+        //cuando el humano posee algun item de defensa
         public void TestAtacarEnanoHumanoItemDefensa()
         {
             int dañoEsperado = 0;
@@ -680,7 +728,8 @@ namespace Test.Library
         }
 
         [Test]
-        //Ataque con item
+        //Comprueba que la reduccion en la vida del personaje humano atacado por un enano sea correcta
+        //cuando el enano posee algun item de ataque
         public void TestAtacarEnanoHumanoItemAtaque()
         {
             int dañoEsperado = 0;
