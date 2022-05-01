@@ -5,6 +5,7 @@ namespace Roleplay
 {
     public static class Atacar
     {
+        // En esta clase se realizan los ataques
         public static void AtaquedeHechiceroaHechicero(Hechicero atacante, Hechicero defensor)
         {
             defensor.Defender(atacante.Ataque);
